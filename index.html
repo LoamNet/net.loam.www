@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Loam.">
+    <meta name="author" content="Matthew Cech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loam</title>
+
+    <!-- Bootstrap CSS, etc -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  </head>
+
+  
+  <style>
+    body{
+      margin: 0px;
+      padding: 0px; 
+    }
+    .loam-aligner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+    }
+    img {
+      max-width:100%;
+      max-height:100%;
+    }
+
+    /* The element to apply the animation to */
+    .loam-centerpiece {
+      animation: hovering 3s alternate infinite ease-in-out;
+      filter: saturate(200%);
+      user-select: none;
+    }
+
+    @keyframes hovering {
+      to { transform: translatey(-30px);}
+    }
+  </style>
+
+  <body>
+    
+    <div class="loam-aligner conainer">
+      <div class="loam-centerpiece">
+        <img id="loam-gif" src="loamsm.gif" alt="loam">
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('loam-gif').draggable = false;
+    </script>
+
+  </body>
+</html>
