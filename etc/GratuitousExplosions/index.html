@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="resources/js/phaser.min.js"></script>
+        <title>Gratuitous Explosions</title>
+    </head>
+    <style>
+        html, body 
+        {
+            padding: 0px;
+            margin: 0px;
+
+            /* Fix for sprite spawn location by force....*/
+            margin-left: -200px;
+            margin-top: -200px;
+            overflow: hidden;
+        }
+    </style>
+    <body>
+        <script>
+        class Main extends Phaser.State {
+            constructor(game){ super(game);
+                this.emitter = null;
+                this.boom = null
+                this.life = 1500;
+            }
+
+            preload() 
+            {
+                game.load.spritesheet('explosion', 'resources/assets/sprites/explosion.png', 210, 210, 17);
+                game.load.audio('boom', 'resources/assets/sounds/boom.wav');
+            }
+              
+            create() 
+            {
+                game.stage.backgroundColor = "#CCCCCC";
+                this.boom = game.add.audio('boom');
+
+                game.physics.startSystem(Phaser.Physics.ARCADE);
+                this.emitter = game.add.emitter(0, 0, 250);
+                this.emitter.makeParticles('explosion');
+                this.emitter.setAlpha(1, 0, this.life);
+                this.emitter.gravity = 180;
+                
+                // This is fine
+                this.emitter.forEach(function(singleParticle) {
+                    singleParticle.animations.add('explosion');
+                    setTimeout(function () {
+                        singleParticle.animations.play('explosion', 30, true);
+                    }, Math.random() * 1000);
+                });
+
+                game.input.onDown.add(this.explode, this);
+
+                this.init();
+            }
+            
+            explode(mouse_ptr)
+            {
+                this.emitter.x = mouse_ptr.x;
+                this.emitter.y = mouse_ptr.y;
+                this.emitter.start(true, this.life, null, Math.floor(Math.random() * 10) + 5);
+
+                this.boom.volume = 0.5 + Math.random() * 10.0 / 5.0;
+                this.boom.play();
+            }
+        }
+
+        // The +400 is because I'm ofsetting to handle the margin adjustment to hide the animation playing
+        var game = new Phaser.Game(window.innerWidth + 400, window.innerHeight + 400, Phaser.AUTO, '');
+        game.state.add('main', new Main(game));
+        game.state.start('main');
+
+        // Window resize
+        window.onresize = function(event) {
+            game.destroy();
+            game = new Phaser.Game(window.innerWidth + 400, window.innerHeight + 400, Phaser.AUTO, '');
+            game.state.add('main', new Main(game));
+            game.state.start('main');    
+        }
+        </script>
+    </body>
+</html>
