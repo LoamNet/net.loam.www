@@ -8,6 +8,7 @@
     <title>Loam</title>
 
     <!-- Bootstrap CSS, etc -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   </head>
 
@@ -37,6 +38,14 @@
       user-select: none;
     }
 
+    .loam-social {
+      color: rgba(0.1,0.1,0.1,1);
+    }
+
+    .loam-social:hover {
+      color: white;
+    }
+
     @keyframes hovering {
       to { transform: translatey(-30px);}
     }
@@ -44,9 +53,15 @@
 
   <body>
     
-    <div class="loam-aligner conainer">
+    <div class="loam-aligner conainer" >
+      <div style="display: inline;">
+      </div>
       <div class="loam-centerpiece">
-        <img id="loam-gif" src="loamsm.gif" alt="loam">
+        <img id="loam-gif" src="loamsm.gif" alt="loam"><br/>
+
+        <a href="https://twitter.com/LoamApp"><i class="btn btn-outline-dark loam-social fab fa-twitter fa-5x"></i></a>
+
+        <a href="https://www.youtube.com/channel/UCaW8h6bNrs3VgLV7w2OyDaQ?view_as=subscriber"><i class="btn btn-outline-dark loam-social fab fa-youtube fa-5x"></i></a>
       </div>
     </div>
 
