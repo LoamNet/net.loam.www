@@ -10,30 +10,59 @@
     .loam-form-spacer {
       margin-top: .5em;
     }
+
+    .loam-shrinkwrap {
+      display: inline-block;
+    }
+
+    .loam-label-beta {
+      margin-top: -15px; 
+      float: right; 
+      margin-right: -10px;
+    }
   </style>
   <body>
-
     <div class="container">
-      <h1 class="text-center">Work Opportunities</h1>
-      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!
-      <p><a href="../">Home</a></p>
-      <br/>
-      <br/>
-      <br/>
 
+
+      <!-- Back button
+      <p><a class="btn btn-outline-dark" href="../"><i class="fas fa-home"></i> Home</a></p>
+      -->
+
+
+      <!-- "Piecework" title -->
+      <br/>
+      <br/>
+      <div class="">
+        <div class="loam-shrinkwrap">
+          <h1>Piecework</h1>
+          <h6 class="loam-label-beta"><em>Beta!</em></h6>
+        </div>
+      </div>
+      
+
+      <!-- Description -->
+      <br/>
+      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!</p>
+      
+      
+
+      <!-- Application Section -->
+      <br/>
+      <br/>
       <div id="apply">
         
         <h4>Task Application</h4>
         <div style="max-width: 200px;"><hr/></div>
 
-        <form action="https://formsapi.jabwn.com/key/qxpyPjQCqptrqkc4VV55">
+        <form action="https://formsapi.jabwn.com/key/LbEdeVSfTKqnSPW8TCuF" method="post">
           <h6>Name:</h6>
-          <input type="text" name="name" placeholder="What do we call you?">
+          <input name="name" type="text" placeholder="What do we call you?" required>
           <h6 class="loam-form-spacer">Email:</h6>
-          <input type="text" name="contact" placeholder="How do we contact you?">
+          <input name="contact" type="text" placeholder="How do we contact you?" required>
           <h6 class="loam-form-spacer">Task:</h6>
-          <input type="text" name="task" placeholder="Task Code">
-          <h6 class="loam-form-spacer">AboutYou:</h6>
+          <input name="task" type="text"  placeholder="Task Code" required>
+          <h6 class="loam-form-spacer">About You:</h6>
           <textarea name="about" rows="4" cols="50" placeholder="Your experience, portfolio link, etc"></textarea>
           <br/>
           <input class="btn btn-outline-dark loam-form-spacer" type="submit" value="Submit">
@@ -41,8 +70,7 @@
       </div>
       <br/>
       <br/>
-      
-    </div>
 
+    </div>
   </body>
 </html>
