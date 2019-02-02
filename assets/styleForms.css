@@ -1,0 +1,14 @@
+.loam-form-spacer {
+  margin-top: .5em;
+}
+.loam-form {
+  max-width: 500px;
+}
+
+.loam-form-med {
+  max-width: 300px;
+}
+
+.loam-form-small {
+  max-width: 150px;
+}

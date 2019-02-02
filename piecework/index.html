@@ -9,34 +9,11 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styleGeneral.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styleForms.css">
   </head>
   <style type="text/css">
-    .loam-form-spacer {
-      margin-top: .5em;
-    }
 
-    .loam-shrinkwrap {
-      display: inline-block;
-    }
-
-    .loam-label-beta {
-      margin-top: -15px; 
-      float: right; 
-      margin-right: -10px;
-    }
-
-    .loam-form {
-      max-width: 500px;
-    }
-
-    .loam-form-med {
-      max-width: 300px;
-    }
-
-    .loam-form-small {
-      max-width: 150px;
-    }
   </style>
   <body>
     <div class="container">
@@ -54,13 +31,13 @@
         <div class="loam-shrinkwrap">
           <h1>Piecework</h1>
           <h6 class="loam-label-beta"><em>Beta!</em></h6>
-          <div style="max-width: 200px;"><hr/></div>
+          <div class="loam-separator"><hr/></div>
         </div>
       </div>
       
 
       <!-- Description -->
-      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!</p>
+      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where this piecework page comes in! Here, you'll find small tasks with a fixed deliverable for a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!</p>
       
       
 
@@ -70,7 +47,7 @@
       <div id="apply" class="loam-form">
         
         <h4>Task Application</h4>
-        <div style="max-width: 200px;"><hr/></div>
+        <div class="loam-separator"><hr/></div>
 
         <form action="https://formsapi.jabwn.com/key/LbEdeVSfTKqnSPW8TCuF" method="post">
           <h6>Name:</h6>
@@ -80,7 +57,7 @@
           <h6 class="loam-form-spacer">Task:</h6>
           <input class="form-control loam-form-small" name="task" type="text" maxlength="10" placeholder="Task Code" required>
           <h6 class="loam-form-spacer">About You:</h6>
-          <textarea class="form-control" name="about" rows="5" maxlength="2000" placeholder="Your experience, portfolio link, etc"></textarea>
+          <textarea class="form-control" name="about" rows="5" maxlength="2000" placeholder="Your experience, any portfolio or work links, and perhaps a bit about yourself!"></textarea>
           <br/>
           <input class="btn btn-outline-dark" type="submit" value="Submit">
         </form>

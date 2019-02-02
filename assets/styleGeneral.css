@@ -1,7 +1,8 @@
-body{
+body {
   margin: 0px;
   padding: 0px; 
 }
+
 .loam-aligner {
   display: flex;
   align-items: center;
@@ -28,6 +29,20 @@ img {
 
 .loam-social:hover {
   color: white;
+}
+
+.loam-shrinkwrap {
+  display: inline-block;
+}
+
+.loam-label-beta {
+  margin-top: -15px; 
+  float: right; 
+  margin-right: -10px;
+}
+
+.loam-separator {
+  max-width: 200px;
 }
 
 @keyframes hovering {
