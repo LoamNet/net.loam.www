@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Temp Work Opportunities</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Currently in Beta, Piecework opportunities are small (generally content creation) tasks we need doing you can take on for a one-time payment!">
+    <meta name="author" content="LOAM">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piecework Opportunities</title>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
@@ -20,6 +25,18 @@
       float: right; 
       margin-right: -10px;
     }
+
+    .loam-form {
+      max-width: 500px;
+    }
+
+    .loam-form-med {
+      max-width: 300px;
+    }
+
+    .loam-form-small {
+      max-width: 150px;
+    }
   </style>
   <body>
     <div class="container">
@@ -37,12 +54,12 @@
         <div class="loam-shrinkwrap">
           <h1>Piecework</h1>
           <h6 class="loam-label-beta"><em>Beta!</em></h6>
+          <div style="max-width: 200px;"><hr/></div>
         </div>
       </div>
       
 
       <!-- Description -->
-      <br/>
       <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!</p>
       
       
@@ -50,22 +67,22 @@
       <!-- Application Section -->
       <br/>
       <br/>
-      <div id="apply">
+      <div id="apply" class="loam-form">
         
         <h4>Task Application</h4>
         <div style="max-width: 200px;"><hr/></div>
 
         <form action="https://formsapi.jabwn.com/key/LbEdeVSfTKqnSPW8TCuF" method="post">
           <h6>Name:</h6>
-          <input name="name" type="text" placeholder="What do we call you?" required>
-          <h6 class="loam-form-spacer">Email:</h6>
-          <input name="contact" type="text" placeholder="How do we contact you?" required>
+          <input class="form-control loam-form-med" name="name" type="text" maxlength="500" placeholder="What should we call you?" required>
+          <h6 class="loam-form-spacer ">Email:</h6>
+          <input class="form-control loam-form-med" name="contact" type="text" maxlength="500" placeholder="How should we contact you?" required>
           <h6 class="loam-form-spacer">Task:</h6>
-          <input name="task" type="text"  placeholder="Task Code" required>
+          <input class="form-control loam-form-small" name="task" type="text" maxlength="10" placeholder="Task Code" required>
           <h6 class="loam-form-spacer">About You:</h6>
-          <textarea name="about" rows="4" cols="50" placeholder="Your experience, portfolio link, etc"></textarea>
+          <textarea class="form-control" name="about" rows="5" maxlength="2000" placeholder="Your experience, portfolio link, etc"></textarea>
           <br/>
-          <input class="btn btn-outline-dark loam-form-spacer" type="submit" value="Submit">
+          <input class="btn btn-outline-dark" type="submit" value="Submit">
         </form>
       </div>
       <br/>
