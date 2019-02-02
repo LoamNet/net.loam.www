@@ -6,28 +6,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
   </head>
+  <style type="text/css">
+    .loam-form-spacer {
+      margin-top: .5em;
+    }
+  </style>
   <body>
 
     <div class="container">
       <h1 class="text-center">Work Opportunities</h1>
-      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout ammount. If you're interested in potentially taking on a task, fill out an application here!
+      <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where our temp work comes in! These are posted as smaller tasks with a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!
       <p><a href="../">Home</a></p>
-      <hr/>
-      <form action="https://formsapi.jabwn.com/key/qxpyPjQCqptrqkc4VV55">
-        Name:<br/>
-        <input type="text" name="name" placeholder="What we can call you">
-        <br/>
-        Email:<br/>
-        <input type="text" name="contact" placeholder="How we can contact you">
-        <br/> 
-        Task:<br/>
-        <input type="text" name="task" placeholder="Task Code">
-        <br/> 
-        About You:<br/>
-        <input type="textarea" placeholder="Your experience, portfolio, etc" >
-        <br/>
-        <input class="btn btn-outline-dark submit" type="submit" value="Submit">
-      </form>
+      <br/>
+      <br/>
+      <br/>
+
+      <div id="apply">
+        
+        <h4>Task Application</h4>
+        <div style="max-width: 200px;"><hr/></div>
+
+        <form action="https://formsapi.jabwn.com/key/qxpyPjQCqptrqkc4VV55">
+          <h6>Name:</h6>
+          <input type="text" name="name" placeholder="What do we call you?">
+          <h6 class="loam-form-spacer">Email:</h6>
+          <input type="text" name="contact" placeholder="How do we contact you?">
+          <h6 class="loam-form-spacer">Task:</h6>
+          <input type="text" name="task" placeholder="Task Code">
+          <h6 class="loam-form-spacer">AboutYou:</h6>
+          <textarea name="about" rows="4" cols="50" placeholder="Your experience, portfolio link, etc"></textarea>
+          <br/>
+          <input class="btn btn-outline-dark loam-form-spacer" type="submit" value="Submit">
+        </form>
+      </div>
+      <br/>
+      <br/>
+      
     </div>
+
   </body>
 </html>
