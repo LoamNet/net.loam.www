@@ -39,10 +39,12 @@
       <!-- Description -->
       <p>Since Loam is currently a small indie collection, we're not able to hire for full or part time positions at the moment. However, we still need bits of work done for projects here and there, and that's where this piecework page comes in! Here, you'll find small tasks with a fixed deliverable for a fixed payout amount. If you're interested in potentially taking on a task, consider <a href="#apply">filling out an application</a>!</p>
       
-      <!-- Avaialble tasks -->
+      <!-- Avaialble tasks (autofill from json) -->
       <br/>
       <br/>
-      <p><em>Nothing is available at this time</em></p>
+      <div id="tasks">
+        <p><em>Nothing is available at this time</em></p>
+      </div>
 
       <!-- Application Section -->
       <br/>
@@ -53,17 +55,39 @@
         <div class="loam-separator"><hr/></div>
 
         <form action="https://formsapi.jabwn.com/key/LbEdeVSfTKqnSPW8TCuF" method="post">
-          <h6>Name:</h6>
-          <input class="form-control loam-form-med" name="name" type="text" maxlength="500" placeholder="What should we call you?" required>
-          <h6 class="loam-form-spacer ">Email:</h6>
-          <input class="form-control loam-form-med" name="contact" type="text" maxlength="500" placeholder="How should we contact you?" required>
-          <h6 class="loam-form-spacer">Task:</h6>
-          <input class="form-control loam-form-small" name="task" type="text" maxlength="10" placeholder="Task Code" required>
-          <h6 class="loam-form-spacer">About You:</h6>
-          <textarea class="form-control" name="about" rows="5" maxlength="2000" placeholder="Your experience, any portfolio or work links, and perhaps a bit about yourself!"></textarea>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control loam-form-med" name="name" type="text" maxlength="500" placeholder="Enter your name or handle" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Email</label>
+            <input class="form-control loam-form-med" name="contact" type="text" maxlength="500" placeholder="Enter a good contact email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="task">Task</label>
+            <input class="form-control loam-form-small" name="task" type="text" maxlength="10" placeholder="Enter task code" required>
+          </div>
+
+          <div class="form-group">
+            <label for="about">About You</label>
+            <textarea class="form-control" name="about" rows="5" maxlength="2000" placeholder="Enter a short description of your past experience, perhaps provide portfolio or work links, and if you're feeling up it potentially a bit about yourself"></textarea>
+          </div>
+
+          <div class="form-group">
+            <p><em>Remember that just because you've applied doesn't mean you'll get the task. Don't do any work until we've gotten in contact with you, given you all relevant information, and given you the green light!</em></p>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="agree" onchange="document.getElementById('submit').disabled = !this.checked;">
+              <label class="form-check-label" for="agree">I Understand!</label>
+            </div>
+          </div>
+
           <br/>
-          <input class="btn btn-outline-dark" type="submit" value="Submit">
+          <input id="submit" class="btn btn-outline-dark" type="submit" value="Submit" disabled="true">
         </form>
+        <br/>
+
       </div>
       <br/>
       <br/>
