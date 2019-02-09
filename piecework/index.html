@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/styleGeneral.css">
     <link rel="stylesheet" type="text/css" href="/assets/styleForms.css">
+    <script type="text/javascript" src="tasks.json"></script>
   </head>
   <style type="text/css">
 
@@ -41,12 +42,14 @@
       
       <!-- Avaialble tasks (autofill from json) -->
       <br/>
-      <br/>
-      <div id="tasks">
-        <p><em>Nothing is available at this time</em></p>
+      <div>
+        <div id="tasks" class="loam-form-tasks">
+          <p><em>Nothing is available at this time</em></p>
+        </div>
       </div>
 
       <!-- Application Section -->
+      <br/>
       <br/>
       <br/>
       <div id="apply" class="loam-form">
@@ -83,7 +86,6 @@
             </div>
           </div>
 
-          <br/>
           <input id="submit" class="btn btn-outline-dark" type="submit" value="Submit" disabled="true">
         </form>
         <br/>
@@ -93,5 +95,39 @@
       <br/>
 
     </div>
+    <script type="text/javascript">
+      // Begin parsing
+      let tasksElement = document.getElementById("tasks");
+      tasksElement.innerHTML = parseAllTasks(tasksJSON);
+
+      // Parse function for all
+      function parseAllTasks(tasks) {
+        let accumulated = "";
+        console.log(tasks);
+        for(var i = 0; i < tasks.active.length; i++) {
+          accumulated += parseSingleTask(tasks.active[i]);
+        }
+
+        return accumulated;
+      }
+      
+      // Sub-parse function
+      function parseSingleTask(task) {
+        let build = 
+        `
+        <div style="margin: 5px; display: inline-block; max-width: 500px; overflow: auto; border: 1px solid black; border-radius: 7px;">
+          <div style="margin-left: 5px; margin-top: 5px;">
+            <h6 style="float: right; margin-right: 10px;">$${task.taskValue}</h6>
+            <h6>Task Code: <code>${task.taskCode}</code></h6>
+            <h6>${task.taskTitle}</h6>
+            <p>${task.taskDescription}</p>
+          </div>
+        </div>
+        `;
+
+        console.log(build)
+        return build;
+      }
+    </script>
   </body>
 </html>
