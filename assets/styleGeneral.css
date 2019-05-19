@@ -26,20 +26,18 @@ body {
   display: inline-block;
   vertical-align: middle;
 
-  height: 100%;
-  width: 100%;
-
   position: absolute;
   margin: 0px;
   padding: 0px;
 
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   z-index: -1;
+  transform: translate(-50%, -50%);
   
   /* https://pacoup.com/2011/06/12/list-of-true-169-resolutions/ */
-  min-width: 368px;
-  min-height: 207px;
+  width: 368px;
+  height: 207px;
 }
 
 #maskLayer {
