@@ -13,8 +13,9 @@
 
     <link rel="stylesheet" type="text/css" href="assets/styleGeneral.css">
   </head>
-  <body>
 
+
+  <body>
     <div class="loam-links">
       <a href="https://twitter.com/LoamApp"><i class="btn btn-outline-dark loam-social fab fa-twitter fa-5x"></i></a>
       <a href="https://www.youtube.com/channel/UCaW8h6bNrs3VgLV7w2OyDaQ?view_as=subscriber"><i class="btn btn-outline-dark loam-social fab fa-youtube fa-5x"></i></a>
@@ -30,9 +31,31 @@
             
             <rect id="masked" width="100%" height="100%" fill="#f8f8f8"></rect>
         </svg>
-          
-        <video muted autoplay loop class="loam-background-video" src="assets/bg-water-360.mp4"></video>
+        
+        <span id="bgvideo">
+          <video muted autoplay loop class="loam-background-video" src="assets/bg-island-360.mp4"></video>
+        </span>
       </div>
     </div>
   </body>
+
+
+  <!-- Random video selection -->
+  <script type="text/javascript">
+    let video = document.getElementById('bgvideo');
+    let elements = [
+      "bg-island-360.mp4",
+      "bg-water-360.mp4",
+      "bg-leaves-360.mp4",
+      "bg-waves-360.mp4"
+    ];
+
+    function rand(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[rand(elements.length)]}"></video>`;
+  </script>
+
+
 </html>
