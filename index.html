@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="LOAM represents a collection of both solo and collaborative indie ventures, from applications to games and more!">
-    <meta name="author" content="LOAM">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loam</title>
+    <meta name="description" content="Loam (Loam LLC) publishes, develops, and helps with the development of applications, games, art, and other digital media! We work with both solo and collaborative indie ventures for everything from resource management resources to development resources, publishing resources, and more">
+    <meta name="author" content="Matthew Cech">
+    <title>Loam - Applications and Media</title>
 
     <!-- Bootstrap CSS, etc -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="assets/styleGeneral.css">
   </head>
-
 
   <body>
     <div class="loam-links">
@@ -55,7 +54,12 @@
       return Math.floor(Math.random() * Math.floor(max));
     }
 
-    video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[rand(elements.length)]}"></video>`;
+    function setRandomVideo() {
+      video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[rand(elements.length)]}"></video>`;
+    }
+
+    setRandomVideo();
+    window.setInterval(setRandomVideo, 15000);
   </script>
 
 
