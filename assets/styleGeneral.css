@@ -85,10 +85,6 @@ h2 {
     mask:url("#maskLayer");
 }
 
-.loam-logo-text {
-  float: left;
-}
-
 /* For divs containing links overlayed on the site */
 .loam-links {
   position: absolute;
@@ -99,11 +95,13 @@ h2 {
 
 /* social button behavior and coloring */
 .loam-social {
+  opacity: .3;
   width: 46px;
   height: 38px;
   color: rgba(0.1,0.1,0.1,1);
 }
 .loam-social:hover {
+  opacity: .85;
   color: white;
 }
 
