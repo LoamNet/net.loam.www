@@ -10,6 +10,34 @@ body {
   background-color: #f8f8f8;
 }
 
+h1 {
+  margin-left: 5px;
+  margin-right: 8px;
+  font-size: 2em;
+  font-family: brandish;
+}
+
+h2 {
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.loam-thing-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loam-things {
+  width: 100%;
+  position: absolute;
+  opacity: .3;
+  bottom: 5px;
+  z-index: 1;
+}
+
 .loam-relative {
   position: relative;
   text-align: center;
@@ -56,6 +84,10 @@ body {
     mask:url("#maskLayer");
 }
 
+.loam-logo-text {
+  float: left;
+}
+
 /* For divs containing links overlayed on the site */
 .loam-links {
   position: absolute;
@@ -66,6 +98,8 @@ body {
 
 /* social button behavior and coloring */
 .loam-social {
+  width: 46px;
+  height: 38px;
   color: rgba(0.1,0.1,0.1,1);
 }
 .loam-social:hover {
