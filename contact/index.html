@@ -9,7 +9,7 @@
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
-		<title>Apps & Software - Loam</title>
+		<title>Contact Us - Loam</title>
 		<link rel="shortcut icon" href="/assets/favicon.ico" />
 
 		<!-- Style, Bootstrap, etc -->
@@ -23,14 +23,30 @@
 
 
 	<style type="text/css">
-		body {
+		h1 {
+			display: inline-block;
+			font-family: brandish;
 			color: rgb(120, 125, 130);
 		}
-		h1 {
-			font-family: brandish;
+
+		h2 {
+			font-family: 'Comfortaa', cursive;
+			font-size: 1.25em;
+			color: rgb(120, 125, 130);
 		}
+
 		p {
 			font-family: 'Comfortaa', cursive;
+			font-size: .9em;
+			color: rgb(120, 125, 130);
+		}
+
+		.item {
+			display: inline-block;
+		}
+
+		.link:hover {
+			color: rgb(90, 130, 220);
 		}
 	</style>
 
@@ -46,9 +62,9 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav">
-					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Apps</h2></a>
+					<a class="nav-item nav-link" href="/apps/"><h2>Apps</h2></a>
 					<a class="nav-item nav-link" href="/games/"><h2>Games</h2></a>
-					<a class="nav-item nav-link" href="/contact/"><h2>Contact</h2></a>
+					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Contact</h2></a>
 				</ul>
 			</div>
 		</nav>
@@ -57,9 +73,14 @@
 		<!-- Primary content section -->
 		<div class="loam-nav-buffer"></div>
 		<br/>
-		<div class="container">
-			<h1>Apps</h1>
-			<p>There's nothing here just yet - check back again later!</p>
+		<div class="container items">
+			<h1>Contact Us</h1>
+			<br/>
+			<br/>
+			<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
+			<br/>
+			<a href="https://twitter.com/loamapp" class="item" style="text-decoration: none;"><h2 class="link"><i class="fab fa-twitter"></i>&nbsp;Twitter</h2></a>
+			<!--div class="item"><h2><i class="fas fa-box"></i>&nbsp;Snail Mail:</h2><p class="item">AAAAA Suite #AAA, Redmond, WA, 98052</p></div-->
 		</div>
 
 

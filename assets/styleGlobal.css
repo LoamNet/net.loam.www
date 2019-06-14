@@ -39,6 +39,12 @@ nav h2:hover {
   color: rgb(120, 125, 130);
 }
 
+.loam-nav-buffer {
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+}
+
 .loam-nav-container {
   width: 100%;
   background-color: #fcfcfc;

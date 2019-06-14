@@ -57,27 +57,11 @@
   opacity: .3;
   width: 46px;
   height: 38px;
-  color: rgba(0.1,0.1,0.1,1);
+  color: rgba(0.1, 0.1, 0.1, 1);
 }
 .loam-social:hover {
   opacity: .85;
   color: white;
-}
-
-/* --------------------- */
-
-.loam-shrinkwrap {
-  display: inline-block;
-}
-
-.loam-label-beta {
-  margin-top: -15px; 
-  float: right; 
-  margin-right: -10px;
-}
-
-.loam-separator {
-  max-width: 200px;
 }
 
 @keyframes hovering {

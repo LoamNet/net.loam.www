@@ -17,6 +17,22 @@
 
 
 
+  <style type="text/css">
+    .title {
+      display: absolute;
+      font-family: brandish;
+      color: rgb(120, 125, 130);
+    }
+    .subtitle {
+      display: absolute;
+      text-align: center;
+      font-family: brandish;
+      color: rgb(120, 125, 130);
+    }
+  </style>
+
+
+
   <body>
     <!-- Title and nav links -->
     <nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
@@ -27,7 +43,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <a class="nav-item nav-link" href="/commissions"><h2 class="loam-color-selected">Apps</h2></a>
+          <a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Apps</h2></a>
           <a class="nav-item nav-link" href="/games/"><h2>Games</h2></a>
           <a class="nav-item nav-link" href="/resources/"><h2>Resources</h2></a>
           <a class="nav-item nav-link" href="/apps/"><h2>Contact</h2></a>
@@ -35,17 +51,21 @@
       </div>
     </nav>
 
-    <div class="container">
+
+    <!-- Primary content section -->
+    <div class="loam-nav-buffer"></div>
+    <br/>
+    <div class="loam-form-container container">
 
       <!-- "Commissions" title -->
-      <br/>
-      <br/>
-      <div class="">
+      <div style="text-align: center;">
         <div class="loam-shrinkwrap">
-          <h1>Commissions</h1>
-          <h6 class="loam-label-beta"><em>Beta!</em></h6>
-          <div class="loam-separator"><hr/></div>
+          <h1 class="title">Commissions</h1>
+          <div style="position: relative; top: -60px; right: -120px;">
+            <h6 class="loam-label-beta"><em>Beta!</em></h6>
+          </div>
         </div>
+        <!--div class="loam-separator"><hr/></div-->
       </div>
       
 
@@ -66,7 +86,7 @@
       <br/>
       <div id="apply" class="loam-form">
         
-        <h4>Task Application</h4>
+        <h4 class="subtitle">Task Application</h4>
         <div class="loam-separator"><hr/></div>
 
         <form action="https://formsapi.jabwn.com/key/LbEdeVSfTKqnSPW8TCuF" method="post">
@@ -132,7 +152,7 @@
       function parseSingleTask(task) {
         let build = 
         `
-        <div style="margin: 5px; display: inline-block; max-width: 500px; overflow: auto; border: 1px solid black; border-radius: 7px;">
+        <div class="loam-task">
           <div style="margin-left: 5px; margin-top: 5px;">
             <h6 style="float: right; margin-right: 10px;">$${task.taskValue}</h6>
             <h6>Task Code: <code>${task.taskCode}</code></h6>
