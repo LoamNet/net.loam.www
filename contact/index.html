@@ -4,12 +4,12 @@
 		<!-- Metadata -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="A variety of different types of apps and software, free and paid, to help with personal and business projects of any size.">
-		<meta name="keywords" content="loam, app, apps, software, publishing, published, publish, free, paid, license, applications">
+		<meta name="description" content="Interested in getting in touch? Feel free to shoot us an email or sent us a DM on twitter!">
+		<meta name="keywords" content="loam, business, contact, mail, email, twitter, online, contact us, phone, email, tweet, service, services, contract, contracting, hire">
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
-		<title>Contact Us - Loam</title>
+		<title>Contact - Loam</title>
 		<link rel="shortcut icon" href="/assets/favicon.ico" />
 
 		<!-- Style, Bootstrap, etc -->
@@ -30,14 +30,15 @@
 		}
 
 		h2 {
-			font-family: 'Comfortaa', cursive;
+			/*font-family: 'Comfortaa', sans-serif;*/
+			font-family: 'Montserrat', sans-serif;
 			font-size: 1.25em;
 			color: rgb(120, 125, 130);
 		}
 
 		p {
-			font-family: 'Comfortaa', cursive;
-			font-size: .9em;
+			/*font-family: 'Comfortaa', sans-serif;*/
+			font-family: 'Montserrat', sans-serif;
 			color: rgb(120, 125, 130);
 		}
 
@@ -74,16 +75,20 @@
 		<div class="loam-nav-buffer"></div>
 		<br/>
 		<div class="container items">
-			<h1>Contact Us</h1>
-			<br/>
-			<br/>
-			<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href=this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
+			<h1>Contact Loam</h1>
+			<p>Want to get in touch? Feel free to reach out to us!</p>
+			<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
 			<br/>
 			<a href="https://twitter.com/loamapp" class="item" style="text-decoration: none;"><h2 class="link"><i class="fab fa-twitter"></i>&nbsp;Twitter</h2></a>
+			<br/>
+			<div class="item"><h2><i class="fas fa-phone"></i>&nbsp;<span id="pho">‪17774275772987605774‬7</span></h2></div>
 			<!--div class="item"><h2><i class="fas fa-box"></i>&nbsp;Snail Mail:</h2><p class="item">AAAAA Suite #AAA, Redmond, WA, 98052</p></div-->
 		</div>
 
-
+		<script type="text/javascript">
+			let item = document.getElementById('pho');
+			item.innerHTML = item.innerHTML.replace('7','-').replace("7", '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+		</script>
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>
