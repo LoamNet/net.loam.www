@@ -1,44 +1,3 @@
-@font-face {
-  font-family: brandish;
-  src: url(Brandish-Regular.woff);
-}
-
-body {
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
-  background-color: #f8f8f8;
-}
-
-h1 {
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 8px;
-  font-size: 1.75em;
-  font-family: brandish;
-}
-
-h2 {
-  display: inline-block;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 1.1em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.loam-thing-container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.loam-things {
-  width: 100%;
-  position: absolute;
-  opacity: .3;
-  bottom: 5px;
-  z-index: 1;
-}
-
 .loam-relative {
   position: relative;
   text-align: center;
@@ -85,12 +44,12 @@ h2 {
     mask:url("#maskLayer");
 }
 
-/* For divs containing links overlayed on the site */
+/* For divs containing links overlaid on the site */
 .loam-links {
   position: absolute;
-  top: 5px;
-  left: 5px;
   z-index: 1;
+  bottom: 15px;
+  right: 15px;
 }
 
 /* social button behavior and coloring */

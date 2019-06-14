@@ -1,82 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Loam (Loam LLC) publishes, develops, and helps with the development of applications, games, art, and other digital media! We work with both solo and collaborative indie ventures for everything from resource management resources to development resources, publishing resources, and more">
-    <meta name="author" content="Matthew Cech">
-    <title>Loam - Applications and Media</title>
+	<head>
+		<!-- Metadata -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Loam LLC publishes, develops, and helps with the development of apps, games, art, and other digital media and software! We work with both solo and collaborative indie ventures for everything from resource management resources to publishing and more!">
+		<meta name="keywords" content="app, apps, loam, indie, applications, software, publishing, indie publishing, indie apps, mobile, desktop">
+		<meta name="author" content="Matthew Cech">
 
-    <!-- Bootstrap CSS, etc -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<!-- Page Setup -->
+		<title>Loam - Indie Games & Apps</title>
+		<link rel="shortcut icon" href="/assets/favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="assets/styleGeneral.css">
-  </head>
-
-  <body>
-    <div>
-    </div>
-    <div>
-      <div class="loam-links">
-        <a class="btn btn-outline-dark loam-social" href="https://twitter.com/LoamApp"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-outline-dark loam-social" href="https://www.youtube.com/channel/UCaW8h6bNrs3VgLV7w2OyDaQ?view_as=subscriber"><i class="fab fa-youtube"></i></a>
-        <!--a class="btn btn-outline-dark loam-social" href="/games"><i class="fas fa-gamepad"></i></a-->
-      </div>
-      <div class="loam-things">
-        <h1>Loam LLC</h1><br/>
-        <h2>Applications</h2>&nbsp;&nbsp;&nbsp;
-        <h2>Games</h2>&nbsp;&nbsp;&nbsp;
-        <h2>Indie</h2>&nbsp;&nbsp;&nbsp;
-        <h2>Publishing</h2>&nbsp;&nbsp;&nbsp;
-        <h2>Media</h2>&nbsp;&nbsp;&nbsp;
-        <h2>Resources</h2>
-      </div>
-    </div>
-
-    <div class="container loam-relative" width="100%">
-      <svg class="loam-svg">
-        <mask id="maskLayer">
-          <rect width="100%" height="100%" fill="#fff"></rect>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
-        </mask>
-          
-        <rect id="masked" width="100%" height="100%" fill="#f8f8f8"></rect>
-      </svg>
-      
-      <span id="bgvideo">
-        <video muted autoplay loop class="loam-background-video" src="assets/bg-island-360.mp4"></video>
-      </span>
-    </div>
-
-    </div>
-  </body>
+		<!-- Style, Bootstrap, etc -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
+		<link rel="stylesheet" type="text/css" href="/assets/styleLanding.css">
+	</head>
 
 
-  <!-- Random video selection -->
-  <script type="text/javascript">
-    let video = document.getElementById('bgvideo');
-    let elements = [
-      "bg-island-360.mp4",
-      "bg-water-360.mp4",
-      "bg-leaves-360.mp4",
-      "bg-waves-360.mp4",
-      "bg-tree-360.mp4"
-    ];
 
-    function rand(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
+	<body>
+		<!-- Title and nav links -->
+		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
+			<a class="navbar-brand" href="#"><h1 class="loam-color-selected">Loam</h1></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-    function setRandomVideo() {
-      video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[rand(elements.length)]}"></video>`;
-    }
-
-    setRandomVideo();
-    //window.setInterval(setRandomVideo, 15000);
-  </script>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<a class="nav-item nav-link active" href="/apps/"><h2>Apps</h2></a>
+					<a class="nav-item nav-link" href="/apps/"><h2>Games</h2></a>
+					<a class="nav-item nav-link" href="/apps/"><h2>Resources</h2></a>
+					<a class="nav-item nav-link" href="/apps/"><h2>Contact</h2></a>
+				</ul>
+			</div>
+		</nav>
 
 
+		<!-- Social links -->
+		<div class="loam-links">
+			<a class="btn btn-outline-dark loam-social" href="https://twitter.com/LoamApp"><i class="fab fa-twitter"></i></a>
+			<a class="btn btn-outline-dark loam-social" href="https://www.youtube.com/channel/UCaW8h6bNrs3VgLV7w2OyDaQ?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+		</div>
+
+
+		<!-- Mask 'Loam' -->
+		<div id="maskitem" class="loam-relative" width="100%" style="display: none;">
+			<svg class="loam-svg">
+				<mask id="maskLayer">
+					<rect width="100%" height="100%" fill="#fff"></rect>
+					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
+				</mask>
+
+				<rect id="masked" width="100%" height="100%" fill="#f8f8f8"></rect>
+			</svg>
+
+			<span id="bgvideo"></span>
+		</div>
+
+
+		<!-- bootstrap, jquery, and scripts for loading -->		
+		<script src="/assets/jquery-3.4.1.min.js"></script>
+		<script src="/assets/bootstrap.bundle.min.js"></script>		
+		<script type="text/javascript">
+		let isFirstRun = true;
+		let transitionDelay = 500;
+		let lastElementIndex = -1;
+		let video = document.getElementById('bgvideo');
+		let elements = [
+			"bg-island-360.mp4",
+			"bg-water-360.mp4",
+			"bg-leaves-360.mp4",
+			"bg-waves-360.mp4",
+			"bg-tree-360.mp4"
+		];
+
+		function rand(max) {
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+
+		function setRandomVideo() {
+			let fadeOutDelay = transitionDelay;
+
+			if(isFirstRun) {
+				fadeOutDelay = 0;
+				isFirstRun = false;
+			}
+
+			$("#maskitem").fadeOut(fadeOutDelay, ()=>{
+				// Get random index that isn't the last
+				let index = rand(elements.length);
+				while(index == lastElementIndex) {
+					index = rand(elements.length);
+				}
+
+				// Set and fade in new video
+				lastElementIndex = index;
+				video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[index]}"></video>`;
+				$("#maskitem").fadeIn(transitionDelay);
+			});
+		}
+
+		setRandomVideo();
+		window.setInterval(setRandomVideo, 14000);
+		</script>
+	</body>
 </html>
