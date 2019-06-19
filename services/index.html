@@ -4,8 +4,8 @@
 		<!-- Metadata -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Interested in getting in touch? Feel free to shoot us an email or sent us a DM on twitter!">
-		<meta name="keywords" content="loam, business, contact, mail, email, twitter, online, contact us, phone, email, tweet, service, services, contract, contracting, hire">
+		<meta name="description" content="Loam offers a variety of services, from small one-off tasks like creating a webpage or writing a task, to more extenisve things like ">
+		<meta name="keywords" content="service, services, loam, loam llc, pebbles, boulders, mountains, pebble, boulder, mountain, consult, consulting, commissions, commission">
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
@@ -37,6 +37,7 @@
 		}
 
 		p {
+			text-align: left;
 			/*font-family: 'Comfortaa', sans-serif;*/
 			font-family: 'Montserrat', sans-serif;
 			color: rgb(120, 125, 130);
@@ -48,6 +49,17 @@
 
 		.link:hover {
 			color: rgb(90, 130, 220);
+		}
+		.maxed {
+			font-size: 1em;
+			max-width: 650px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+		}
+		.col-lg h2 {
+			text-align: left;
+			font-size: 1.5em;
 		}
 	</style>
 
@@ -65,8 +77,8 @@
 				<ul class="navbar-nav">
 					<!--a class="nav-item nav-link" href="/apps"><h2>Apps</h2></a-->
 					<!--a class="nav-item nav-link" href="/games"><h2>Games</h2></a-->
-					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a-->
-					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Contact</h2></a>
+					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Services</h2></a>
+					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
 				</ul>
 			</div>
 		</nav>
@@ -75,21 +87,32 @@
 		<!-- Primary content section -->
 		<div class="loam-nav-buffer"></div>
 		<br/>
+		<br/>
 		<div class="container items">
-			<h1>Contact Loam</h1>
-			<p>Want to get in touch? We'd be happy to chat!</p>
-			<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
-			<br/>
-			<a href="https://twitter.com/loamapp" class="item" style="text-decoration: none;"><h2 class="link"><i class="fab fa-twitter"></i>&nbsp;Twitter</h2></a>
-			<br/>
-			<div class="item"><h2><i class="fas fa-phone"></i>&nbsp;<span id="pho">‪17774275772987605774‬7</span></h2></div>
-			<!--div class="item"><h2><i class="fas fa-box"></i>&nbsp;Snail Mail:</h2><p class="item">AAAAA Suite #AAA, Redmond, WA, 98052</p></div-->
+			<h1>Services</h1>
+			<p class="maxed">Loam services come in a variety of different tiers. If you're interested in any of the services we provide, feel free to <a href="/contact">contact us</a>! Don't know what tier a task would fit into? We can work with your specific requirements to figure it out.
+			<div class="container">
+				<br/>
+				<br/>
+				<div class="row">
+					<div class="col-lg">
+						<h2><strong>Pebbles</strong></h2>
+						<p>Pebbles are small commission-style tasks that have a one-off payment associated with them. An example of a 'pebble' would be something like creating a single web page, a logo concept, an effect for a Unity game, a couple sound bites, or something else that would generally fit within an afternoon or two.
+					</div>
+					<br/>
+					<div class="col-lg">
+						<h2><strong>Boulders</strong></h2>
+						<p>Boulders are mid-sized tasks that can generally be broken down into a variety of subtasks. Examples include promotional video creation and editing, interface design, website creation and hosting, and small software tools among other things. Boulders generally take a week or two, and pricing is either done hourly or at a flat rate depending on the task.
+					</div>
+					<br/>
+					<div class="col-lg">
+						<h2><strong>Mountains</strong></h2>
+						<p>A mountain is a sizable, potentially multi-month contract that a member of Loam undertakes in order to develop a project. A mountain can range from creating an app or smaller game from scratch up to a part-time contract position lasting as long as needed. Pricing is always done hourly.
+					</div>
+			  	</div>
+			</div>
 		</div>
 
-		<script type="text/javascript">
-			let item = document.getElementById('pho');
-			item.innerHTML = item.innerHTML.replace('7','-').replace("7", '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
-		</script>
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>
