@@ -9,7 +9,7 @@
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
-		<title>Loam - Indie Games & Apps</title>
+		<title>Loam - Indie, Apps, & More</title>
 		<link rel="shortcut icon" href="/assets/favicon.ico" />
 
 		<!-- Style, Bootstrap, etc -->
@@ -27,13 +27,16 @@
 		<!-- Title and nav links -->
 		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
 			<a class="navbar-brand" href="#"><h1 class="loam-color-selected">Loam</h1></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="loam-nav-visuals">
+					<i class="fas fa-bars"></i>
+					<i class="fas fa-times collapse navbarSupportedContent"></i>
+				</span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse navbarSupportedContent">
 				<ul class="navbar-nav">
-					<!--a class="nav-item nav-link active" href="/apps"><h2>Apps</h2></a-->
+					<a class="nav-item nav-link active" href="/apps"><h2>Apps</h2></a>
 					<!--a class="nav-item nav-link" href="/games"><h2>Games</h2></a-->
 					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a>
 					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
@@ -50,7 +53,7 @@
 
 
 		<!-- Mask 'Loam' -->
-		<div id="maskitem" class="loam-relative" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="display: none;">
+		<div id="maskitem" class="loam-relative" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="display: none;">
 			<svg class="loam-svg">
 				<mask id="maskLayer">
 					<rect width="100%" height="100%" fill="#fff"></rect>
@@ -85,14 +88,14 @@
 		}
 
 		function setRandomVideo() {
-			let fadeOutDelay = transitionDelay;
+			let fadeDelay = transitionDelay;
 
 			if(isFirstRun) {
-				fadeOutDelay = 0;
+				fadeDelay = 0;
 				isFirstRun = false;
 			}
 
-			$("#maskitem").fadeOut(fadeOutDelay, ()=>{
+			$("#maskitem").fadeOut(fadeDelay, ()=>{
 				// Get random index that isn't the last
 				let index = rand(elements.length);
 				while(index == lastElementIndex) {
@@ -102,12 +105,12 @@
 				// Set and fade in new video
 				lastElementIndex = index;
 				video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[index]}"></video>`;
-				$("#maskitem").fadeIn(transitionDelay);
+				$("#maskitem").fadeIn(fadeDelay);
 			});
 		}
 
 		setRandomVideo();
-		window.setInterval(setRandomVideo, 14000);
+		window.setInterval(setRandomVideo, 10000);
 		</script>
 	</body>
 </html>

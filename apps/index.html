@@ -41,15 +41,21 @@
 		<!-- Title and nav links -->
 		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
 			<a class="navbar-brand" href="/"><h1>Loam</h1></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="loam-nav-visuals">
+					<i class="fas fa-bars"></i>
+					<i class="fas fa-times collapse navbarSupportedContent"></i>
+				</span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse navbarSupportedContent">
 				<ul class="navbar-nav">
-					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Apps</h2></a>
-					<a class="nav-item nav-link" href="/games"><h2>Games</h2></a>
+					<a class="nav-item nav-link active" href="/apps"><h2 class="loam-color-selected">Apps</h2></a>
+					<!--a class="nav-item nav-link" href="/games"><h2>Games</h2></a-->
+					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a>
 					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
+				</ul>
+			</div>
 				</ul>
 			</div>
 		</nav>
@@ -57,6 +63,7 @@
 
 		<!-- Primary content section -->
 		<div class="loam-nav-buffer"></div>
+		<br/>
 		<br/>
 		<div class="container">
 			<h1>Apps</h1>

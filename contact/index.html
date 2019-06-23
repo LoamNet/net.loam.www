@@ -47,7 +47,16 @@
 		}
 
 		.link:hover {
-			color: rgb(90, 130, 220);
+			color: rgb(100, 140, 210);
+			text-shadow: rgba(0, 0, 0, .2) 2px 2px 2px;
+		}
+
+		.maxed {
+			font-size: 1em;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
 		}
 	</style>
 
@@ -57,13 +66,16 @@
 		<!-- Title and nav links -->
 		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
 			<a class="navbar-brand" href="/"><h1>Loam</h1></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="loam-nav-visuals">
+					<i class="fas fa-bars"></i>
+					<i class="fas fa-times collapse navbarSupportedContent"></i>
+				</span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse navbarSupportedContent">
 				<ul class="navbar-nav">
-					<!--a class="nav-item nav-link" href="/apps"><h2>Apps</h2></a-->
+					<a class="nav-item nav-link" href="/apps"><h2>Apps</h2></a>
 					<!--a class="nav-item nav-link" href="/games"><h2>Games</h2></a-->
 					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a-->
 					<a class="nav-item nav-link" href="#"><h2 class="loam-color-selected">Contact</h2></a>
@@ -75,20 +87,29 @@
 		<!-- Primary content section -->
 		<div class="loam-nav-buffer"></div>
 		<br/>
+		<br/>
 		<div class="container items">
 			<h1>Contact Loam</h1>
-			<p>Want to get in touch? We'd be happy to chat!</p>
-			<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
-			<br/>
-			<a href="https://twitter.com/loamapp" class="item" style="text-decoration: none;"><h2 class="link"><i class="fab fa-twitter"></i>&nbsp;Twitter</h2></a>
-			<br/>
-			<div class="item"><h2><i class="fas fa-phone"></i>&nbsp;<span id="pho">‪17774275772987605774‬7</span></h2></div>
+			<div class="maxed">
+				<p>Want to get in touch? We'd be happy to chat! Send us a message and we'll get back to you as soon as possible!</p>
+				<a href="mailto:contactAloamDTapp" class="item" style="text-decoration: none;" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><h2 class="link"><i class="fas fa-paper-plane"></i>&nbsp;Email</h2></a>
+				<br/>
+				<a href="https://twitter.com/loamapp" class="item" style="text-decoration: none;"><h2 class="link"><i class="fab fa-twitter"></i>&nbsp;Twitter</h2></a>
+				<br/>
+				
+				<a href="tel:17778575778527553774‬7" style="text-decoration: none;" onclick="this.href = this.href.replace('7','-').replace('7', '').replace('7','').replace(/7/,'').replace(/7/,'').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');" class="item"><h2 class="link"><i class="fas fa-fax"></i>&nbsp;<span id="fa">17778575778527553774‬7</span></h2></a>
+				<br/>
+				<a href="tel:17774275772987605774‬7" style="text-decoration: none;" onclick="this.href = this.href.replace('7','-').replace('7', '').replace('7','').replace(/7/,'').replace(/7/,'').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');" class="item"><h2 class="link"><i class="fas fa-phone"></i>&nbsp;<span id="pho">‪17774275772987605774‬7</span></h2></a>
+			</div>
 			<!--div class="item"><h2><i class="fas fa-box"></i>&nbsp;Snail Mail:</h2><p class="item">AAAAA Suite #AAA, Redmond, WA, 98052</p></div-->
 		</div>
 
 		<script type="text/javascript">
 			let item = document.getElementById('pho');
-			item.innerHTML = item.innerHTML.replace('7','-').replace("7", '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+			item.innerHTML = item.innerHTML.replace('7','-').replace('7', '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+
+			let faItem = document.getElementById('fa');
+			faItem.innerHTML = faItem.innerHTML.replace('7','-').replace('7', '(').replace(/7/,'').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
 		</script>
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
