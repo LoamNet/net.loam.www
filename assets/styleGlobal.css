@@ -8,16 +8,17 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #f8f8f8;
+
 }
 
 nav h1 {
   display: inline-block;
   font-size: 1.5em;
   font-family: brandish;
-  color: rgb(180, 185, 190);
+  color: white;
 }
 nav h1:hover {
-  color: rgb(120, 125, 130);
+  color: #38322F;
 }
 
 nav h2 {
@@ -26,17 +27,17 @@ nav h2 {
   margin-bottom: 0px;
   font-size: 1.05em;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(180, 185, 190);
+  color: #f8f8f8;
 }
 nav h2:hover {
-  color: rgb(120, 125, 130);
+  color: #38322F;
 }
 
 .loam-color-deselected {
-  color: rgb(180, 185, 190);
+  color: #38322F;
 }
 .loam-color-selected {
-  color: rgb(120, 125, 130);
+  color: #38322F;
 }
 
 .loam-nav-buffer {
@@ -47,7 +48,6 @@ nav h2:hover {
 
 .loam-nav-container {
   width: 100%;
-  background-color: #fcfcfc;
   position: absolute;
   z-index: 2;
   margin: 0px;
@@ -55,7 +55,8 @@ nav h2:hover {
   padding-bottom: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  box-shadow: 0px 0px 3px rgba(0,0,0,.15);
+  box-shadow: inset 0px -20px 5px -20px rgba(0,0,0,.35);
+  background-color: #9E938F;
 }
 .loam-nav-container .navbar-brand {
   padding: 0px;
