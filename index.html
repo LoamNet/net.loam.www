@@ -22,9 +22,8 @@
 		<link rel="stylesheet" type="text/css" href="/assets/styleLanding.css">
 	</head>
 
-
-
 	<body>
+
 		<!-- Title and nav links -->
 		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
 			<a class="navbar-brand" href="#"><h1>Loam</h1></a>
@@ -54,18 +53,22 @@
 		</div>
 
 
-		<!-- Mask 'Loam' -->
+
+		<!-- Mask 'Loam' <image xlink:href="test.jpg"/> -->
 		<div id="maskitem" class="loam-relative" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="display: none;">
 			<svg class="loam-svg">
 				<mask id="maskLayer">
 					<rect width="100%" height="100%" fill="#fff"></rect>
 					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
 				</mask>
-
-				<rect id="masked" width="100%" height="100%" fill="#f8f8f8"></rect>
+				<!--rect id="masked" width="100%" height="100%" fill="#f8f8f855"></rect-->
+				<image id="masked" xlink:href="test.jpg"/>
+						<!--<div id="masked" style="background: url('test.jpg'); position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; display: cover;"-->
 			</svg>
 
+			<!-- style="z-index: -1; position: relative; -->
 			<span id="bgvideo"><video muted autoplay loop class="loam-background-video" src="assets/bg-island-360.mp4"></video></span>
+			
 		</div>
 
 
