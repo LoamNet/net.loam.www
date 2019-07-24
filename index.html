@@ -55,14 +55,14 @@
 
 
 		<!-- Mask 'Loam' <image xlink:href="test.jpg"/> -->
-		<div id="maskitem" class="loam-relative" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="display: none;">
+		<div id="maskitem" class="loam-relative" data-toggl="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="background-color: rgba(0,0,0,0); color: rgba(0,0,0,0);">
 			<svg class="loam-svg">
 				<mask id="maskLayer">
 					<rect width="100%" height="100%" fill="#fff"></rect>
 					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
 				</mask>
 				<image class="masked" height="100%" xlink:href="test.jpg"/>
-				<rect class="masked" width="100%" height="20%" fill="#f8f8f822" y="40%"></rect>
+				<rect class="masked" width="100%" height="8em" fill="#f8f8f855" y="40%"></rect>
 				<!--<div id="masked" style="background: url('test.jpg'); position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; display: cover;"-->
 			</svg>
 
@@ -82,7 +82,7 @@
 		let transitionDelay = 500;
 		let lastElementIndex = -1;
 		let videoElement = document.getElementById('bgvideo');
-		let videoCycleTime = 10000;
+		let videoCycleTime = 1000;
 		let elements = [
 			"bg-island-360.mp4",
 			"bg-water-360.mp4",
@@ -100,7 +100,7 @@
 		function setRandomVideo() {
 			let fadeDelay = transitionDelay;
 
-			$("#maskitem").fadeOut(fadeDelay, ()=>{
+			//$("#maskitem").fadeOut(fadeDelay, ()=>{
 				// Get random index that isn't the last
 				let index = rand(elements.length);
 				while(index == lastElementIndex) {
@@ -109,7 +109,7 @@
 
 				// Set and fade in new video
 				displayVideoAtIndex(index, fadeDelay)
-			});
+			//});
 		}
 
 		// Displays the video at the specified index, and fades it in over time. If no
@@ -121,8 +121,6 @@
 			if(fadeTime == null) {
 				fadeTime = transitionDelay;
 			}
-
-			$("#maskitem").fadeIn(fadeTime);
 		}
 
 		// Initial setup
