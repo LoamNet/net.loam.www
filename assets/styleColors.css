@@ -1,0 +1,23 @@
+/* s0 stands for shade 0, which for a given color will be the darkest shade.
+While there's no upper limit, you'll know that shade 2 will always be lighter than 
+shade 1, and shade 1 lighter than shade 0. */
+
+.loam-color-brown-s0 {
+	color: #38322F;
+}
+
+.loam-color-brown-s1 {
+	color: #736965;
+}
+
+.loam-color-brown-s2 {
+	color: #AEA09B;
+}
+
+.loam-color-grey-s0 {
+
+}
+
+.loam-color-grey-s1 {
+	color: #F8F8F8;
+}
