@@ -40,7 +40,7 @@
     text-shadow: 2px 2px #bbbbbb;
 }
 
-#masked {
+.masked {
     mask:url("#maskLayer");
 }
 
