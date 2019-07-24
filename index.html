@@ -38,6 +38,7 @@
 				<ul class="navbar-nav">
 					<a class="nav-item nav-link active" href="/apps"><h2>Apps</h2></a>
 					<!--a class="nav-item nav-link" href="/games"><h2>Games</h2></a-->
+					<a class="nav-item nav-link" href="/resources"><h2>Resources</h2></a>
 					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a>
 					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
 				</ul>
@@ -63,7 +64,7 @@
 				<rect id="masked" width="100%" height="100%" fill="#f8f8f8"></rect>
 			</svg>
 
-			<span id="bgvideo"></span>
+			<span id="bgvideo"><video muted autoplay loop class="loam-background-video" src="assets/bg-island-360.mp4"></video></span>
 		</div>
 
 
@@ -71,10 +72,13 @@
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>		
 		<script type="text/javascript">
+
+		// Variables
 		let isFirstRun = true;
 		let transitionDelay = 500;
 		let lastElementIndex = -1;
-		let video = document.getElementById('bgvideo');
+		let videoElement = document.getElementById('bgvideo');
+		let videoCycleTime = 10000;
 		let elements = [
 			"bg-island-360.mp4",
 			"bg-water-360.mp4",
@@ -83,17 +87,14 @@
 			"bg-tree-360.mp4"
 		];
 
+		// Chooses a random value between 0 and max.
 		function rand(max) {
 			return Math.floor(Math.random() * Math.floor(max));
 		}
 
+		// Randomly chooses a new video to play
 		function setRandomVideo() {
 			let fadeDelay = transitionDelay;
-
-			if(isFirstRun) {
-				fadeDelay = 0;
-				isFirstRun = false;
-			}
 
 			$("#maskitem").fadeOut(fadeDelay, ()=>{
 				// Get random index that isn't the last
@@ -103,14 +104,26 @@
 				}
 
 				// Set and fade in new video
-				lastElementIndex = index;
-				video.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[index]}"></video>`;
-				$("#maskitem").fadeIn(fadeDelay);
+				displayVideoAtIndex(index, fadeDelay)
 			});
 		}
 
-		setRandomVideo();
-		window.setInterval(setRandomVideo, 10000);
+		// Displays the video at the specified index, and fades it in over time. If no
+		// fade time is specified, the default is used.
+		function displayVideoAtIndex(index, fadeTime) {
+			lastElementIndex = index;
+			videoElement.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[index]}"></video>`;
+
+			if(fadeTime == null) {
+				fadeTime = transitionDelay;
+			}
+
+			$("#maskitem").fadeIn(fadeTime);
+		}
+
+		// Initial setup
+		displayVideoAtIndex(0, 0);
+		window.setInterval(setRandomVideo, videoCycleTime);
 		</script>
 	</body>
 </html>
