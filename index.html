@@ -55,14 +55,16 @@
 
 
 		<!-- Mask 'Loam' <image xlink:href="test.jpg"/> -->
-		<div id="maskitem" class="loam-relative" data-toggl="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="background-color: rgba(0,0,0,0); color: rgba(0,0,0,0);">
+		<div id="maskitem" class="loam-relative" data-toggl="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" width="100%" style="background-color: rgba(0,0,0,0); color: rgba(0,0,0,0); ">
 			<svg class="loam-svg">
 				<mask id="maskLayer">
 					<rect width="100%" height="100%" fill="#fff"></rect>
 					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
 				</mask>
-				<image class="masked" height="100%" xlink:href="test.jpg"/>
-				<rect class="masked" width="100%" height="8em" fill="#f8f8f855" y="40%"></rect>
+
+				<image id="loam-fill" class="masked" xlink:href="test.jpg" style="width: auto; height: auto;"/>
+				<!--rect class="masked" width="100%" height="4em" fill="#f8f8f844" y="50%"></rect-->
+
 				<!--<div id="masked" style="background: url('test.jpg'); position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; display: cover;"-->
 			</svg>
 
@@ -123,9 +125,29 @@
 			}
 		}
 
+		// Called when window resizes
+		let lastWidth;
+		function whenResizing() {
+			let fill = document.getElementById('loam-fill');
+
+			let targetWidth = window.innerWidth;
+			let targetHeight = window.innerHeight;
+			let ratio = 16.0 / 9.0;
+
+			if(targetWidth / targetHeight < ratio) {
+				fill.style.height = window.innerHeight;
+				fill.style.width = "auto";
+			} else {
+				fill.style.width = window.innerWidth;
+				fill.style.height = "auto";
+			}
+		}
+
 		// Initial setup
 		displayVideoAtIndex(0, 0);
 		window.setInterval(setRandomVideo, videoCycleTime);
+		whenResizing();
+		window.onresize = whenResizing;
 		</script>
 	</body>
 </html>

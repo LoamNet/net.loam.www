@@ -43,7 +43,9 @@
 .masked {
     mask:url("#maskLayer");
 }
-
+.maskedtw {
+    mask:url("#maskLayer");
+}
 /* For divs containing links overlaid on the site */
 .loam-links {
   position: absolute;
