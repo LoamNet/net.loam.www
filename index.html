@@ -22,7 +22,7 @@
 		<link rel="stylesheet" type="text/css" href="/assets/styleLanding.css">
 	</head>
 
-	<body>
+	<body style="overflow: hidden;">
 
 		<!-- Title and nav links -->
 		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
@@ -63,7 +63,7 @@
 				</mask>
 
 				<image id="loam-fill" class="masked" xlink:href="test.jpg" style="width: 3840; height: 2160; bottom: 0px; left: 0px;"/>
-				<rect id="loam-bar" class="masked" width="100%" height="130px" fill="#f8f8faaa" y="42%"></rect>
+				<rect id="loam-bar" class="masked" width="100%" height="150px" fill="#f8f8faaa" y="42%"></rect>
 			</svg>
 
 			<!-- style="z-index: -1; position: relative; -->
@@ -145,7 +145,7 @@
 			
 			// Next, handle the white bar
 			let bar = document.getElementById('loam-bar');
-			bar.style.y = (window.innerHeight - 140) / 2 + "px";
+			bar.style.y = (window.innerHeight - 150) / 2 + "px";
 		}
 
 		// Initial setup
