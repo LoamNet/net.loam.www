@@ -62,8 +62,8 @@
 					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
 				</mask>
 
-				<image id="loam-fill" class="masked" xlink:href="test.jpg" style="width: 3840; height: 2160; bottom: 0px; left: 0px;"/>
-				<rect id="loam-bar" class="masked" width="100%" height="150px" fill="#f8f8faaa" y="42%"></rect>
+				<image id="loam-fill" class="masked" xlink:href="test.jpg" dominant-baseline="middle" text-anchor="middle" style="width: 3840; height: 2160; bottom: 0px; left: 0px;"/>
+				<rect id="loam-bar" class="masked" width="100%" height="130px" fill="#f8f8faaa" y="42%" dominant-baseline="middle" text-anchor="middle"></rect>
 			</svg>
 
 			<!-- style="z-index: -1; position: relative; -->
@@ -134,8 +134,7 @@
 			let targetWidth = window.innerWidth;
 			let body = document.body;
     		let html = document.documentElement;
-			var targetHeight = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+			var targetHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 			let ratio = 16.0 / 9.0;
 
 			if(targetWidth / targetHeight < ratio) {
@@ -148,13 +147,17 @@
 			
 			// Next, handle the white bar
 			let bar = document.getElementById('loam-bar');
-			bar.style.y = (window.innerHeight - 150) / 2 + "px";
+			bar.style.y = document.getElementById('maskText').getBoundingClientRect().y + 11 + "px";
 		}
 
 		// Initial setup
 		displayVideoAtIndex(0, 0);
 		window.setInterval(setRandomVideo, videoCycleTime);
-		whenResizing();
+
+		$(document).ready(function(){
+			whenResizing();
+		});
+
 		window.onresize = whenResizing;
 		</script>
 	</body>
