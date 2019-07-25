@@ -45,6 +45,9 @@
 			</div>
 		</nav>
 
+		<div class="loam-art-credit">
+			<p><a href="https://www.patreon.com/Danero">"Forest" by Danero</a></p>
+		</div>
 
 		<!-- Social links -->
 		<div class="loam-links">
@@ -151,9 +154,11 @@
 		}
 
 		// Initial setup
-		displayVideoAtIndex(0, 0);
-		window.setInterval(setRandomVideo, videoCycleTime);
+		//displayVideoAtIndex(0, 0);
+		//window.setInterval(setRandomVideo, videoCycleTime);	
+		setRandomVideo();
 
+		// Register resize and perform it only when the document is ready
 		$(document).ready(function(){
 			whenResizing();
 		});

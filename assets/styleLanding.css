@@ -34,7 +34,7 @@
 
 #maskText {
     text-align: center;
-    font-family: brandish;
+    font-family: brandish, serif;
     font-size: 6.6em;
     fill:#000;
     text-shadow: 3px 3px #aaa;
@@ -52,6 +52,19 @@
   z-index: 1;
   bottom: 15px;
   right: 15px;
+}
+
+.loam-art-credit {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .65em;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 15px;
+}
+
+.loam-art-credit a {
+  color: #f8f8f8
 }
 
 /* social button behavior and coloring */
