@@ -65,8 +65,8 @@
 					<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="maskText">Loam</text>
 				</mask>
 
-				<image id="loam-fill" class="masked" xlink:href="/assets/forest-comission-from-danero-compressed-browserjpg-65percent.jpg" dominant-baseline="middle" text-anchor="middle" style="width: 3840; height: 2160; bottom: 0px; left: 0px;"/>
-				<rect id="loam-bar" class="masked" width="100%" height="130px" fill="#f8f8faaa" y="42%" dominant-baseline="middle" text-anchor="middle"></rect>
+				<image id="loam-fill" class="masked" xlink:href="/assets/forest-comission-from-danero-compressed-browserjpg-65percent.jpg"/>
+				<rect id="loam-bar" class="masked" width="100%" height="130px" fill="#f8f8faaa" dominant-baseline="middle" text-anchor="middle"></rect>
 			</svg>
 
 			<!-- style="z-index: -1; position: relative; -->
@@ -103,16 +103,14 @@
 		function setRandomVideo() {
 			let fadeDelay = transitionDelay;
 
-			//$("#" + videoElementName).fadeOut(fadeDelay, ()=>{
-				// Get random index that isn't the last
-				let index = rand(elements.length);
-				while(index == lastElementIndex) {
-					index = rand(elements.length);
-				}
+			// Get random index that isn't the last
+			let index = rand(elements.length);
+			while(index == lastElementIndex) {
+				index = rand(elements.length);
+			}
 
-				// Set and fade in new video
-				displayVideoAtIndex(index, fadeDelay)
-			//});
+			// Set and fade in new video
+			displayVideoAtIndex(index, fadeDelay)
 		}
 
 		// Displays the video at the specified index, and fades it in over time. If no
@@ -120,37 +118,41 @@
 		function displayVideoAtIndex(index, fadeTime) {
 			lastElementIndex = index;
 			videoElement.innerHTML = `<video muted autoplay loop class="loam-background-video" src="assets/${elements[index]}"></video>`;
-
-			if(fadeTime == null) {
-				fadeTime = transitionDelay;
-			}
-
-			//$("#" + videoElementName).fadeIn(fadeTime);
 		}
 
 		// Called when window resizes
 		let lastWidth;
 		function whenResizing() {
+
+			
 			// First, handle the background.
 			let fill = document.getElementById('loam-fill');
 
 			let targetWidth = window.innerWidth;
 			let body = document.body;
     		let html = document.documentElement;
-			var targetHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+			var targetHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 			let ratio = 16.0 / 9.0;
 
 			if(targetWidth / targetHeight < ratio) {
-				fill.style.height = window.innerHeight;
-				fill.style.width = "auto";
+				let newWidth = window.innerWidth;
+				let newHeight = window.innerHeight * ratio;
+				fill.setAttribute("height",  newHeight + "px")
+				fill.setAttribute("width", newWidth + "px");
+				fill.style.position = "absolute";
 			} else {
-				fill.style.width = window.innerWidth;
-				fill.style.height = "auto";
+				let newWidth = window.innerWidth * ratio;
+				let newHeight = window.innerHeight;
+				fill.setAttribute("height",  newHeight + "px")
+				fill.setAttribute("width", newWidth + "px");
+				fill.style.position = "absolute";
 			}
 			
+			console.log(window.innerHeight)
 			// Next, handle the white bar
 			let bar = document.getElementById('loam-bar');
-			bar.style.y = document.getElementById('maskText').getBoundingClientRect().y + 11 + "px";
+			//let yPrev = parseInt(bar.getAttribute("y"), 10)
+			bar.setAttribute("y", ((targetHeight - 150)/ 2) + "px");
 		}
 
 		// Initial setup
