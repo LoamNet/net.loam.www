@@ -123,15 +123,13 @@
 		// Called when window resizes
 		let lastWidth;
 		function whenResizing() {
-
-			
 			// First, handle the background.
 			let fill = document.getElementById('loam-fill');
 
-			let targetWidth = window.innerWidth;
 			let body = document.body;
     		let html = document.documentElement;
-			var targetHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+			let targetWidth = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth, window.innerWidth);
+			var targetHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, window.innerHeight);
 			let ratio = 16.0 / 9.0;
 
 			// If we will be showing whitespace below the image, use height.
