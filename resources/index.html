@@ -19,6 +19,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
 		<link rel="stylesheet" type="text/css" href="/assets/styleColors.css">
+
+		<!-- Display markdown content as necessary -->
+		<script src="/assets/showdown.min.js"></script>
 	</head>
 
 
@@ -44,20 +47,10 @@
 			font-family: 'Montserrat', sans-serif;
 		}
 
-		.item {
-			display: inline-block;
-		}
-
-		.maxed {
-			font-size: 1em;
-			max-width: 650px;
-			margin-left: auto;
-			margin-right: auto;
+		#loam-guide {
 			text-align: left;
-		}
-		.col-lg h2 {
-			text-align: left;
-			font-size: 1.5em;
+			margin-top: 100px;
+			visibility: hidden;
 		}
 	</style>
 
@@ -92,11 +85,66 @@
 			<h1>Resources</h1>
 			<hr/>
 			<h2>Website Templates</h2>
-			<a class="btn btn-outline-dark" role="button" href="https://github.com/MatthewCech/app.loam.www/blob/master/resources/websites/guide.md"><i class="fas fa-link"></i> Show me the steps</a><br>
+			<button class="btn btn-outline-dark" role="button" onclick="toggleFileDisplay();">Setup Guide&nbsp;&nbsp;<span id="loam-expand-icon"><i class="fas fa-expand"></i></span></button><br>
+			<div id="loam-guide"></div>
 		</div>
 
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>
+
+		<script type="text/javascript">
+			let isDisplayingGuide = false;
+			let targetGuideDiv = document.getElementById("loam-guide");
+			let expandIcon = document.getElementById("loam-expand-icon");
+
+			// Display the specified content
+			function displayMarkdown(content) {
+				let converter = new showdown.Converter();
+
+				if (targetGuideDiv) {
+					targetGuideDiv.innerHTML = converter.makeHtml(content);
+				}
+			}
+
+			// Loads a local file on the server
+			// Based on https://stackoverflow.com/questions/36921947/read-a-server-side-file-using-javascript/41133213
+			function loadFile(file_path) {
+				if(file_path == null) {
+					return;
+				}
+
+				let result = null;
+				let xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.open("GET", file_path, false);
+				xmlhttp.send();
+
+				if (xmlhttp.status == 200) {
+					result = xmlhttp.responseText;
+					displayMarkdown(result);
+				}
+
+				return result;
+			}
+
+			// Either display or hide the guide as necessary
+			function toggleFileDisplay() {
+				if(!isDisplayingGuide) {
+					loadFile("websites/guide.md");
+					targetGuideDiv.style.visibility = "visible";
+					expandIcon.innerHTML = "<i class='fas fa-compress'></i>";
+
+					isDisplayingGuide = true;
+				} else {
+					targetGuideDiv.innerHTML = "";
+					targetGuideDiv.style.visibility = "hidden";
+					expandIcon.innerHTML = "<i class='fas fa-expand'></i>";
+
+					isDisplayingGuide = false;
+				}
+
+			}
+		</script>
 	</body>
 </html>
