@@ -1,4 +1,4 @@
-# The-Portfolio
+# Website Setup Guide
 A quick template and walkthough for a minimalist portfolio website using the files in this repo, with accompanying walkthrough gifs. 
 
 
