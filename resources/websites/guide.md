@@ -1,5 +1,5 @@
 # Website Setup Guide
-A quick template and walkthough for a minimalist portfolio website using the files in this repo, with accompanying walkthrough gifs. 
+This is a walkthrough to help with setting up a website using Github Pages, Cloudflare, and Google Domains. 
 
 
 ### Getting Started
@@ -16,7 +16,8 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 
 ### Configuring GitHub's side for a custom URL:
 
-Section Walkthough Gif: https://i.imgur.com/NZlhA6a.gif
+![Adding a Custom URL](https://i.imgur.com/NZlhA6a.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/NZlhA6a.gif)
 
 - Head to repo settings
 - Find the secion about github pages. If you have not enabled it, do so, probably on master branch. (Stop here if you don't want a custom domain!)
@@ -28,7 +29,8 @@ Section Walkthough Gif: https://i.imgur.com/NZlhA6a.gif
 
 ### Configuring Google Domains
 
-Section Walkthough Gif: https://i.imgur.com/Nn929du.gif 
+![Setting up Google Domains](https://i.imgur.com/Nn929du.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/Nn929du.gif)
 
 - Go to domains.google.com and navigate to the domain you wish to point at github.
 - Head to the DNS tab (second from the right, looks like stacked boxes)
@@ -48,10 +50,11 @@ However, there's no HTTPS going on, and you still need a site. For now, we shoul
 
 We'll be using cloudflare in order to force connections to be HTTPS. They don't make you pay for an SSL certificate, which is nice.
 
-We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain.
+We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain. You can skip the first step if you would prefer to make a different Cloudflare account, or use an existing one.
 
 
-Section Walkthough Gif: https://i.imgur.com/eFmyvsb.gif
+![Setting up HTTPS with Cloudflare part 1](https://i.imgur.com/eFmyvsb.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/eFmyvsb.gif)
 
 - Go to domains.google.com and navigate to the domain you've been using for this
 - Click on the mail tab, second from the left, and scroll down. 
@@ -61,7 +64,9 @@ Section Walkthough Gif: https://i.imgur.com/eFmyvsb.gif
 
 Next, we're going to be setting up a cloudflare account, and fight out way to the console.
 
-Section Walkthough Gif: https://i.imgur.com/uNvyr7k.gif
+
+![Setting up HTTPS with Cloudflare part 2](https://i.imgur.com/uNvyr7k.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/uNvyr7k.gif)
 
 - Head to Cloudflare.com
 - Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.
@@ -75,7 +80,8 @@ Section Walkthough Gif: https://i.imgur.com/uNvyr7k.gif
 Second to last, we're going to set up an SSL certificate.
 
 
-Section Walkthough Gif: https://i.imgur.com/8eG7flT.gif
+![Setting up HTTPS with Cloudflare part 3](https://i.imgur.com/8eG7flT.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/8eG7flT.gif)
 
 - In cloudflare, head to the Crypto tab at the top
 - Under SSL at the top, select 'flexible' from the drop down. We're going to need a flexible certificate. 
@@ -85,10 +91,12 @@ Section Walkthough Gif: https://i.imgur.com/8eG7flT.gif
 Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.
 
 
-Section Walkthough Gif: https://i.imgur.com/cX9Jsyz.gif
+![Setting up HTTPS with Cloudflare part 4](https://i.imgur.com/cX9Jsyz.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/cX9Jsyz.gif)
 
 - Head to the page rules tab at the top
 - Create a new page rule for "Enforce HTTPS"
+	- If you don't see this yet, you'll probably need to wait a few minutes for the SSL certificate to finish applying!
 - Enter your site URL modified as follows: `http://*yoursitename.com*`
 
 In the crypto tab, if the certificate says "active" and if in the overview tab it says "Status: Active" then you're good to go for HTTPS. Try navigating to your page now! It should say "secure" to the left of the URL.

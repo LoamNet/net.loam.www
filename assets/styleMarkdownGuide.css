@@ -1,0 +1,14 @@
+img {
+	max-width: 400px;
+	border: 1px solid rgba(0, 0, 0, .35);
+	border-radius: 5px;
+}
+
+#loam-markdown {
+	margin-bottom: 3em;
+}
+
+.loam-back-button {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
