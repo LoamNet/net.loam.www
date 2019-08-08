@@ -57,6 +57,10 @@ nav h2:hover {
   padding-right: 10px;
   box-shadow: inset 0px -20px 5px -20px #38322FA0;
   background-color: #AEA09B;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .loam-nav-container .navbar-brand {
   padding: 0px;
@@ -74,6 +78,6 @@ nav h2:hover {
 }
 
 .navbar-toggler {
-   outline: none !important;
-   box-shadow: none;
+  outline: none !important;
+  box-shadow: none;
 }
