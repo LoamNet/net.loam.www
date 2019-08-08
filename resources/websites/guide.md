@@ -1,6 +1,9 @@
 # Website Setup Guide
-This is a walkthrough to help with setting up a website using Github Pages, Cloudflare, and Google Domains. 
+This is a walkthrough to help with setting up a website using Github Pages, Cloudflare, and Google Domains.
 
+First and foremost, this is free of charge and aims to provide free setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services.
+
+If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our [services](https://loam.app/services) page or sending us an email to ask about what we can do for you!
 
 ### Getting Started
 
