@@ -83,6 +83,7 @@ nav h2:hover {
 }
 
 .loam-copy {
+  text-align: left;
   font-size: 10px;
   opacity: .8;
 }
