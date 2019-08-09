@@ -5,10 +5,14 @@ img {
 }
 
 #loam-markdown {
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 }
 
 .loam-back-button {
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+.loam-bottom-spacer {
+	margin-bottom: 1em;
 }

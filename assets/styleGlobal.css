@@ -81,3 +81,8 @@ nav h2:hover {
   outline: none !important;
   box-shadow: none;
 }
+
+.loam-copy {
+  font-size: 10px;
+  opacity: .8;
+}
