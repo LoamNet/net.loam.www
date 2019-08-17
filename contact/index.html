@@ -90,13 +90,13 @@
 			<div class="maxed">
 				<p>Want to get in touch? We'd be happy to chat! Send us a message and we'll get back to you as soon as possible!</p>
 				<p>
-						<a href="mailto:loam.appAgmailDTcom" class="item" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope"></i><span id="e-comm"></span></a>
+						<a href="mailto:loam.appAgmailDTcom" class="item" onclick="this.href = this.href.replace(/A/,'&#64;').replace(/DT/,'&#46;')"><i class="fa fa-envelope"></i>&nbsp;Email</span></a>
 						<br/>
 						<a href="https://twitter.com/loamapp" class="item"><i class="fab fa-twitter"></i>&nbsp;Twitter</a>
 						<br/>
-						<a href="tel:17778575778527553774‬7" onclick="this.href = this.href.replace('7','-').replace('7', '').replace('7','').replace(/7/,'').replace(/7/,'').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');" class="item"><i class="fas fa-fax"></i>&nbsp;<span id="fa">17778575778527553774‬7</span></a>
-						<br/>
 						<a href="tel:17774275772987605774‬7" onclick="this.href = this.href.replace('7','-').replace('7', '').replace('7','').replace(/7/,'').replace(/7/,'').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');" class="item"><i class="fas fa-phone"></i>&nbsp;<span id="pho">‪17774275772987605774‬7</span></a>
+						<br/>
+						<a href="tel:17778575778527553774‬7" onclick="this.href = this.href.replace('7','-').replace('7', '').replace('7','').replace(/7/,'').replace(/7/,'').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');" class="item"><i class="fas fa-fax"></i>&nbsp;<span id="fa">17778575778527553774‬7</span></a>
 						<br/>
 				</p>
 			</div>
@@ -104,14 +104,11 @@
 		</div>
 
 		<script type="text/javascript">
-			let eItem = document.getElementById('e-comm');
-			eItem.innerHTML = "&nbsp;contactAloamDTapp".replace(/A/,'&#64;').replace(/DT/,'&#46;');
-
 			let item = document.getElementById('pho');
-			item.innerHTML = item.innerHTML.replace('7','-').replace('7', '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+			item.innerHTML = "Phone: " + item.innerHTML.replace('7','-').replace('7', '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
 
 			let faItem = document.getElementById('fa');
-			faItem.innerHTML = faItem.innerHTML.replace('7','-').replace('7', '(').replace(/7/,'').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+			faItem.innerHTML = "Fax: " + faItem.innerHTML.replace('7','-').replace('7', '(').replace(/7/,'').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
 		</script>
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
