@@ -54,7 +54,91 @@
 		<div class="container text-left">
 			<a class="btn btn-outline-dark loam-back-button" role="button" href="../"><i class="fas fa-angle-left"></i> Back</a>
 			<a class="btn btn-outline-dark loam-home-button" role="button" href="https://loam.app"><i class="fas fa-home"></i></a>
-			<div id="loam-markdown"></div>
+			<div id="loam-markdown">
+<h1 id="websitesetupguide">Website Setup Guide</h1>
+<hr>
+<h3 id="about">About</h3>
+<p>First and foremost, this is free of charge and aims to provide free setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services.</p>
+<h3 id="whattechisused">What Tech is Used?</h3>
+<p>The template sites on the <a href="https://loam.app/resources">Loam Resources Page</a> are hand-written using <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://fontawesome.com">Font Awesome</a> for actual page content. Bootstrap is an open source toolkit that makes things look not as terrible when you resize a page, and provides some nice defaults. Font Awesome, on the other hand, is a sweet way to add professionally designed icons to things! In addition, Google's <a href="material.io/design/">Material Design</a> icons and themes occasionally make an appearance.</p>
+<p>For hosting, this tutorial uses <a href="https://pages.github.com">GitHub Pages</a>. If you don't like the idea of fiddling with HTML and just want a theme-maker, you can use their built-in one and skip this tutorial entirely. If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our <a href="https://loam.app/services">services</a> page or sending us an email to ask about what we can do for you!</p>
+<h3 id="gettingstarted">Getting Started</h3>
+<p>To make a website with this tutorial, you're going to need a GitHub account, but wait, finish reading this paragraph before you make it. You should probably name it something like your name, or something close to your name for the purposes of looking professional, or the name of your organization. <code>yourGitHubUsername.github.io</code> will be how the site appears if you don't buy a custom URL, so keep that in mind when choosing a name.</p>
+<p>Go ahead and make a GitHub repository under the repositories tab on your account page - for testing to make sure it's set up correctly, make the name <code>yourGitHubUsername.github.io</code> and for ease of use, indicate that you want a ReadMe to be created for you - your site will be live at <code>https://yourname.github.io</code>! You can do this with a differently named repo as well if you wish, you'll just have to make sure you turn on github pages in the first section below.</p>
+<p>All things considered, if you don't care about a custom URL, you're done. Just grab one of the example sites and the assets folder and plop them in your own (You can just drag and drop into your repository in a web browser), and you're good to go!</p>
+<p>If you're after a custom domain tho, carry on! You'll learn about how to set that up, and a lot more. For this tutorial, gifs will often be demoing the setup of a website called theportfolio.pw, which as the original website for this set of templates!</p>
+<h3 id="configuringgithubssideforacustomurl">Configuring GitHub's side for a custom URL:</h3>
+<p><img class="img-fluid" src="https://i.imgur.com/NZlhA6a.gif" alt="Adding a Custom URL">
+<a href="https://i.imgur.com/NZlhA6a.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>Head to repo settings</li>
+<li>Find the secion about github pages. If you have not enabled it, do so, probably on master branch. (Stop here if you don't want a custom domain!)</li>
+<li>Once enabled, specify your custom domain. </li>
+<li>If you look in the repo root, we see a CNAME file was added!</li>
+<li>It's good practice to add a www.<sitename> variant. You can do this in-browser by clicking the edit button.</sitename></li>
+</ul>
+<h3 id="configuringgoogledomains">Configuring Google Domains</h3>
+<p><img class="img-fluid" src="https://i.imgur.com/Nn929du.gif" alt="Setting up Google Domains">
+<a href="https://i.imgur.com/Nn929du.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>Go to domains.google.com and navigate to the domain you wish to point at github.</li>
+<li>Head to the DNS tab (second from the right, looks like stacked boxes)</li>
+<li>Scroll all the way down to the records section</li>
+<li>Add an A name record for both of github's IP addresses: This way, we point the base site at github pages.</li>
+<li>Github IPs are <code>192.30.252.154</code> and <code>192.30.252.153</code> at the time of writing.</li>
+<li>Add a CNAME record, with <code>www</code> filled in as the record name. We will direct this to the domain itself, just without the www</li>
+</ul>
+<p>Google domains is fast. Like, really fast. Realistically, you can probably navigate to your new site right after setting all that up, so go ahead and test that out in incognito/private browsing mode so that we don't have old things cached.</p>
+<h3 id="httpsoptionalbutnotreallyoptional">HTTPS (Optional, but not really optional)</h3>
+<p>At this point, we have your domain hosted at github pages. We have a custom domain rerouting HTTP requests.
+However, there's no HTTPS going on, and you still need a site. For now, we should get you set up with HTTPS routing.</p>
+<p>We'll be using cloudflare in order to force connections to be HTTPS. They don't make you pay for an SSL certificate, which is nice.</p>
+<p>We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain. You can skip the first step if you would prefer to make a different Cloudflare account, or use an existing one.</p>
+<p><img class="img-fluid" src="https://i.imgur.com/eFmyvsb.gif" alt="Setting up HTTPS with Cloudflare part 1">
+<a href="https://i.imgur.com/eFmyvsb.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>Go to domains.google.com and navigate to the domain you've been using for this</li>
+<li>Click on the mail tab, second from the left, and scroll down. </li>
+<li>Enter <code>cloudflare</code> as the email name, and route it to an email you own already. </li>
+<li>As necessary, confirm the email. If you forward to the email you used for registering the domain, no confirmation is necessary.</li>
+</ul>
+<p>Next, we're going to be setting up a cloudflare account, and fight out way to the console.</p>
+<p><img class="img-fluid" src="https://i.imgur.com/uNvyr7k.gif" alt="Setting up HTTPS with Cloudflare part 2">
+<a href="https://i.imgur.com/uNvyr7k.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>Head to Cloudflare.com</li>
+<li>Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.</li>
+<li>Once you have created an account, you will be asked to specify the name of your site. Do so with your custom URL.</li>
+<li>From here, you will be asked to select a plan. For our purposes, the free one is just fine. </li>
+<li>After confirming the plan, Cloudflare will query the existing DNS for all records. You should see 3 records that you made: the 2 A records that go to githubs IP, and the CNAME record. You will also see MX records for goole email servers. </li>
+<li>If all records are present, continue. This should take you to the last step before the console.</li>
+<li>You will then be asked to update the name servers. Go back to the DNS records section of your custom domain, and go ahead and find the nameservers section at the top. Copy in the ones Cloudflare specifies.</li>
+<li>Once updated. you will then be at the console.</li>
+</ul>
+<p>Second to last, we're going to set up an SSL certificate.</p>
+<p><img class="img-fluid" src="https://i.imgur.com/8eG7flT.gif" alt="Setting up HTTPS with Cloudflare part 3">
+<a href="https://i.imgur.com/8eG7flT.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>In cloudflare, head to the Crypto tab at the top</li>
+<li>Under SSL at the top, select 'flexible' from the drop down. We're going to need a flexible certificate. </li>
+<li>turn 'Always use HTTPS' on</li>
+<li>turn 'Automatic HTTPS Rewrites' on</li>
+</ul>
+<p>Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.</p>
+<p><img class="img-fluid" src="https://i.imgur.com/cX9Jsyz.gif" alt="Setting up HTTPS with Cloudflare part 4">
+<a href="https://i.imgur.com/cX9Jsyz.gif"><br><i class="fas fa-expand-arrows-alt"></i></a></p>
+<ul>
+<li>Head to the page rules tab at the top</li>
+<li>Create a new page rule for "Enforce HTTPS"<ul>
+<li>If you don't see this yet, you'll probably need to wait a few minutes for the SSL certificate to finish applying!</li></ul></li>
+<li>Enter your site URL modified as follows: <code>http://*yoursitename.com*</code></li>
+</ul>
+<p>In the crypto tab, if the certificate says "active" and if in the overview tab it says "Status: Active" then you're good to go for HTTPS. Try navigating to your page now! It should say "secure" to the left of the URL.</p>
+<p>You're done! Good work!</p>
+<h3 id="afterthoughts">Afterthoughts</h3>
+<p>You'll need to update information in the template that's in this repo. A text editor that does color syntax highlighting for HTML is recommended - Something like Sublime Text, Notepad++, Atom, or many others!</p>
+<p>If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download at https://cesanta.com/binary.html - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.</p>
+			</div>
 			<a class="btn btn-outline-dark loam-back-button" role="button" href="../"><i class="fas fa-angle-left"></i> Back</a>
 			<a class="btn btn-outline-dark loam-home-button" role="button" href="https://loam.app"><i class="fas fa-home"></i></a>
 			<div class="loam-bottom-spacer"></div>
@@ -65,43 +149,5 @@
 		<!-- External Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>
-
-		<!-- Display markdown -->
-		<script type="text/javascript">
-			let targetGuideDiv = document.getElementById("loam-markdown");
-
-			// Display the specified content
-			function displayMarkdown(content) {
-				let converter = new showdown.Converter();
-
-				if (targetGuideDiv) {
-					targetGuideDiv.innerHTML = converter.makeHtml(content);
-				}
-			}
-
-			// Loads a local file on the server
-			// Based on https://stackoverflow.com/questions/36921947/read-a-server-side-file-using-javascript/41133213
-			function loadFile(file_path) {
-				if(file_path == null) {
-					return;
-				}
-
-				let result = null;
-				let xmlhttp = new XMLHttpRequest();
-
-				xmlhttp.open("GET", file_path, false);
-				xmlhttp.send();
-
-				if (xmlhttp.status == 200) {
-					result = xmlhttp.responseText;
-					displayMarkdown(result);
-				}
-
-				return result;
-			}
-
-			// Perform initial load
-			loadFile("guide.md");
-		</script>
 	</body>
 </html>

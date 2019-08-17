@@ -111,10 +111,10 @@
 
 		<script type="text/javascript">
 			let item = document.getElementById('pho');
-			item.innerHTML = "Phone: " + item.innerHTML.replace('7','-').replace('7', '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+			item.innerHTML = '<span style="display: inline-block; width: 70px;">Phone</span>' + item.innerHTML.replace('7','-').replace('7', '(').replace('7','').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
 
 			let faItem = document.getElementById('fa');
-			faItem.innerHTML = "Fax: " + faItem.innerHTML.replace('7','-').replace('7', '(').replace(/7/,'').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
+			faItem.innerHTML = '<span style="display: inline-block; width: 70px;">Fax</span>' + faItem.innerHTML.replace('7','-').replace('7', '(').replace(/7/,'').replace(/7/,'').replace(/7/,')').replace(/7/,'-').replace('7','-').replace('7','').replace('7','').replace(/7/,'');
 		</script>
 		<!-- Scripts -->
 		<script src="/assets/jquery-3.4.1.min.js"></script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Metadata -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A guide to setting up a website with Github and Google Domains">
+		<meta name="keywords" content="service, services, loam, loam llc, pebbles, boulders, mountains, pebble, boulder, mountain, consult, consulting, commissions, commission">
+		<meta name="author" content="Matthew Cech">
+
+		<!-- Page Setup -->
+		<title>Website Setup Guide - Loam</title>
+		<link rel="shortcut icon" href="/assets/favicon.ico" />
+
+		<!-- Style, Bootstrap, etc -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
+		<link rel="stylesheet" type="text/css" href="/assets/styleColors.css">
+		<link rel="stylesheet" type="text/css" href="/assets/styleMarkdownGuide.css">
+		<!-- Display markdown content as necessary -->
+		<script src="/assets/showdown.min.js"></script>
+	</head>
+
+
+	<style type="text/css">
+		body {
+			color: #736965;
+		}
+
+		h1 {
+			display: inline-block;
+			font-family: brandish;
+		}
+
+		h2 {
+			/*font-family: 'Comfortaa', sans-serif;*/
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.25em;
+		}
+
+		p {
+			text-align: left;
+			/*font-family: 'Comfortaa', sans-serif;*/
+			font-family: 'Montserrat', sans-serif;
+		}
+	</style>
+
+
+	<body>
+		<!-- Primary content section -->
+		<div class="container text-left">
+			<a class="btn btn-outline-dark loam-back-button" role="button" href="../"><i class="fas fa-angle-left"></i> Back</a>
+			<a class="btn btn-outline-dark loam-home-button" role="button" href="https://loam.app"><i class="fas fa-home"></i></a>
+			<div id="loam-markdown"></div>
+			<a class="btn btn-outline-dark loam-back-button" role="button" href="../"><i class="fas fa-angle-left"></i> Back</a>
+			<a class="btn btn-outline-dark loam-home-button" role="button" href="https://loam.app"><i class="fas fa-home"></i></a>
+			<div class="loam-bottom-spacer"></div>
+			<hr/>
+			<p class="loam-copy">Copyright &copy; 2019 Loam LLC - all rights reserved. Trademarks belong to their respective owners.</p>
+		</div>
+
+		<!-- External Scripts -->
+		<script src="/assets/jquery-3.4.1.min.js"></script>
+		<script src="/assets/bootstrap.bundle.min.js"></script>
+
+		<!-- Display markdown -->
+		<script type="text/javascript">
+			let targetGuideDiv = document.getElementById("loam-markdown");
+
+			// Display the specified content
+			function displayMarkdown(content) {
+				let converter = new showdown.Converter();
+
+				if (targetGuideDiv) {
+					targetGuideDiv.innerHTML = converter.makeHtml(content);
+				}
+			}
+
+			// Loads a local file on the server
+			// Based on https://stackoverflow.com/questions/36921947/read-a-server-side-file-using-javascript/41133213
+			function loadFile(file_path) {
+				if(file_path == null) {
+					return;
+				}
+
+				let result = null;
+				let xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.open("GET", file_path, false);
+				xmlhttp.send();
+
+				if (xmlhttp.status == 200) {
+					result = xmlhttp.responseText;
+					displayMarkdown(result);
+				}
+
+				return result;
+			}
+
+			// Perform initial load
+			loadFile("guide.md");
+		</script>
+	</body>
+</html>
