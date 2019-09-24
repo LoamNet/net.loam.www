@@ -4,8 +4,8 @@
 		<!-- Metadata -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Interested in getting in touch? Feel free to shoot us an email or sent us a DM on twitter!">
-		<meta name="keywords" content="loam, business, contact, mail, email, twitter, online, contact us, phone, email, tweet, service, services, contract, contracting, hire">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="keywords" content="{{ page.keywords }}">
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
@@ -19,8 +19,42 @@
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
 		<link rel="stylesheet" type="text/css" href="/assets/styleColors.css">
+
+		<!-- Inline styling -->
+		<style type="text/css">
+			body {
+				color: #736965;
+			}
+
+			h1 {
+				display: inline-block;
+				font-family: brandish;
+			}
+
+			h2 {
+				font-size: 1.25em;
+			}
+
+			p {
+				/*font-family: 'Comfortaa', sans-serif;*/
+				font-family: 'Montserrat', sans-serif;
+			}
+
+			.item {
+				display: inline-block;
+				margin: 3px;
+			}
+
+			.maxed {
+				font-size: 1em;
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+			}
+		</style>
 	</head>
-	<body>
+	<body style="overflow: hidden;">
 		{% include navigation.html %}
 		<!-- Primary content section -->
 		<div class="loam-nav-buffer"></div>
@@ -34,5 +68,9 @@
 			<hr/>
 			<p class="loam-copy">Copyright &copy; 2019 Loam LLC - all rights reserved. Trademarks belong to their respective owners.</p>
 		</div>
+
+		<!-- Scripts required for all -->
+		<script src="/assets/jquery-3.4.1.min.js"></script>
+		<script src="/assets/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
