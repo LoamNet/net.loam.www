@@ -1,15 +1,21 @@
+---
+permalink: /
+title: Loam - Games, Apps & Media
+description: Loam creates games and apps, and helps indie content creators with resources and publishing to help create their own games, apps, art, and other media!
+keywords: app, apps, loam, indie, applications, software, publishing, indie publishing, indie apps, mobile, desktop, net, network
+---
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- General meta -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Loam creates games and apps, and helps indie content creators with resources and publishing to help create their own games, apps, art, and other media!">
-		<meta name="keywords" content="app, apps, loam, indie, applications, software, publishing, indie publishing, indie apps, mobile, desktop, net, network">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="keywords" content="{{ page.keywords }}">
 		<meta name="author" content="Matthew Cech">
 
 		<!-- Page Setup -->
-		<title>Loam - Games, Apps, and Media</title>
+		<title>{{ page.title }}</title>
 		<link rel="shortcut icon" href="/assets/favicon.ico" />
 
 		<!-- Open Graph (and related) meta -->
@@ -58,26 +64,8 @@
 	}
 	</script>
 
-	<body style="overflow: hidden;">
-		<!-- Title and nav links -->
-		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
-			<a class="navbar-brand" href="#"><img class="testlogo d-inline-block align-top" src="/assets/loam.png" alt="Geometric Loam logo featuring a negative space L"><h1>Loam</h1></a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="loam-nav-visuals loam-color-brown-s0">
-					<i class="fas fa-bars"></i>
-				</span>
-			</button>
-
-			<div class="collapse navbar-collapse navbarSupportedContent">
-				<ul class="navbar-nav">
-					<a class="nav-item nav-link" href="/content"><h2>Content</h2></a>
-					<a class="nav-item nav-link" href="/resources"><h2>Resources</h2></a>
-					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a>
-					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
-				</ul>
-			</div>
-		</nav>
+	<body >
+		{% include navigation.html %}
 
 		<div class="loam-art-credit">
 			<a href="https://www.patreon.com/Danero">"Forest" by Danero</a>

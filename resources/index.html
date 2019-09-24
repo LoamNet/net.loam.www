@@ -1,158 +1,84 @@
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<!-- Metadata -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Looking to get started with your own projects? Loam has a whole variety of resources to help you kickstart your project, be it a website, app, game, or something else! We're constantly adding more free media, guides and tutorials!">
-		<meta name="keywords" content="resources, website, loam, loam llc, webistes, portfolio, product, bootstrap, javascript, cloudflare, github, guide, beginner">
-		<meta name="author" content="Matthew Cech">
+---
+permalink: /resources/
+layout: secondary
+title: Resources - Loam
+description: Looking to get started with your own projects? Loam has a whole variety of resources to help you kickstart your project, be it a website, app, game, or something else! We're constantly adding more free media, guides and tutorials!
+keywords: resource, resources, tutorial, tutorials, website, websites, loam, loam llc, portfolio, product, bootstrap, javascript, cloudflare, github, guide, beginner
+---
+<style type="text/css">
+	.loam-sitecard-links {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
 
-		<!-- Page Setup -->
-		<title>Resources - Loam</title>
-		<link rel="shortcut icon" href="/assets/favicon.ico" />
+	.loam-website-preivews {
+		margin-bottom: 1em;
+	}
 
-		<!-- Style, Bootstrap, etc -->
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
-		<link rel="stylesheet" type="text/css" href="/assets/styleColors.css">
+	.loam-website-preview {
+		max-width: 300px;
+		border: 1px solid rgba(115, 105, 100, .2);
+		border-radius: 5px;
+	}
 
-		<!-- Display markdown content as necessary -->
-		<script src="/assets/showdown.min.js"></script>
-	</head>
+	.loam-guide-button {
+		margin-bottom: 2em;
+	}
 
+	.loam-section-description {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2em;
+	}
 
-	<style type="text/css">
-		body {
-			color: #736965;
-		}
+	.loam-section {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 
-		h1 {
-			display: inline-block;
-			font-family: brandish;
-		}
-
-		p {
-			text-align: left;
-			/*font-family: 'Comfortaa', sans-serif;*/
-			font-family: 'Montserrat', sans-serif;
-		}
-
-		.loam-sitecard-links {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-
-		.loam-website-preivews {
-			margin-bottom: 1em;
-		}
-
-		.loam-website-preview {
-			max-width: 300px;
-			border: 1px solid rgba(115, 105, 100, .2);
-			border-radius: 5px;
-		}
-
-		.loam-guide-button {
-			margin-bottom: 2em;
-		}
-
-		.loam-section-description {
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 2em;
-		}
-
-		.loam-section {
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-
-		.loam-website-pane-text {
-			max-width: 420px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	</style>
-
-
-	<body>
-		<!-- Title and nav links -->
-		<nav class="navbar navbar-expand-lg navbar-light loam-nav-container">
-			<a class="navbar-brand" href="/"><img class="testlogo d-inline-block align-top" src="/assets/loam.png" alt="Geometric Loam logo featuring a negative space L"><h1>Loam</h1></a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="loam-nav-visuals loam-color-brown-s0">
-					<i class="fas fa-bars"></i>
-				</span>
-			</button>
-
-			<div class="collapse navbar-collapse navbarSupportedContent">
-				<ul class="navbar-nav">
-					<a class="nav-item nav-link" href="/content"><h2>Content</h2></a>
-					<a class="nav-item nav-link" href="#"><h2>Resources</h2></a>
-					<a class="nav-item nav-link" href="/services"><h2>Services</h2></a>
-					<a class="nav-item nav-link" href="/contact"><h2>Contact</h2></a>
-				</ul>
-			</div>
-		</nav>
-
-		<!-- Primary content section -->
-		<div class="loam-nav-buffer"></div>
-		<br/>
-		<br/>
-		<div class="container items">
-			<h1>Resources</h1>
-			<p class="loam-section-description">A variety of resources designed to help get your projects up and running!</p>
-			<div id="resources-websites">
-				<br/>
-				<h2 class="loam-section-title"><strong>Website Templates</strong></h2>
-				<p class="loam-section-description">We've got free website templates to help you get something up and running fast, and a guide to help you with your setup. The guide is designed to help provide free or very low cost setup, and goes hand-in-hand with the demo templates provided!</p>
-				<div class="container loam-website-preivews">
-					<div class="row">
-						<div class="col-md loam-section">
-							<h3 class="loam-section-subtitle"><strong>The Portfolio</strong></h3>
-							<img class="loam-website-preview" src="websites/portfolio.png" alt="A picture of a website designed to be a personal portfolio">
-							<div class="loam-sitecard-links">
-								<a class="btn btn-outline-dark" role="button" href="websites/portfolio"><i class="fas fa-laptop-code"></i> Demo</a>
-								<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1eS-ltScOMOC_e-Aqgx-kzXMKkaILmtzY"><i class="fas fa-file-download"></i> Download</a>
-							</div>
-							<p class="loam-website-pane-text">A simple, single-page site designed to showcase projects as single cards. You can add more rows of projects as necessary, each row featuring up to 3 items!</p>
-						</div>
-						<div class="col-md loam-section">
-							<h3 class="loam-section-subtitle"><strong>The Product</strong></h3>
-							<img class="loam-website-preview" src="websites/product.png" alt="A picture of a website designed to feature a single product">
-							<div class="loam-sitecard-links">
-								<a class="btn btn-outline-dark" role="button" href="websites/product"><i class="fas fa-laptop-code"></i> Demo</a>
-								<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1zdWWIr4jraz69oFzxNp0FfdiYsMFDC5t"><i class="fas fa-file-download"></i> Download</a>
-							</div>
-							<p class="loam-website-pane-text">A colorful single-page site designed to highlight a specific tool or product. While it's designed for 2 columns only, more can be added to highlight specific features or add other page links!</p>
-						</div>
-						<div class="col-md loam-section">
-							<h3 class="loam-section-subtitle"><strong>Service Showcase</strong></h3>
-							<img class="loam-website-preview"  src="websites/service.png" alt="A picture of a website designed to showcase a series of products or a service">
-							<div class="loam-sitecard-links">
-								<a class="btn btn-outline-dark" role="button" href="websites/service"><i class="fas fa-laptop-code"></i> Demo</a>
-								<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=15lVFIhObue0iIBHKUC3XU4qhR2MDpbFV"><i class="fas fa-file-download"></i> Download</a>
-							</div>
-							<p class="loam-website-pane-text">A single-page website designed to highlight a series of products or a given service, providing both service or product highlights, and a gallery.</p>
-						</div>
-					</div>
+	.loam-website-pane-text {
+		max-width: 420px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+<h1>Resources</h1>
+<p class="loam-section-description">A variety of resources designed to help get your projects up and running!</p>
+<div id="resources-websites">
+	<br/>
+	<h2 class="loam-section-title"><strong>Website Templates</strong></h2>
+	<p class="loam-section-description">We've got free website templates to help you get something up and running fast, and a guide to help you with your setup. The guide is designed to help provide free or very low cost setup, and goes hand-in-hand with the demo templates provided!</p>
+	<div class="container loam-website-preivews">
+		<div class="row">
+			<div class="col-md loam-section">
+				<h3 class="loam-section-subtitle"><strong>The Portfolio</strong></h3>
+				<img class="loam-website-preview" src="websites/portfolio.png" alt="A picture of a website designed to be a personal portfolio">
+				<div class="loam-sitecard-links">
+					<a class="btn btn-outline-dark" role="button" href="websites/portfolio"><i class="fas fa-laptop-code"></i> Demo</a>
+					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1eS-ltScOMOC_e-Aqgx-kzXMKkaILmtzY"><i class="fas fa-file-download"></i> Download</a>
 				</div>
-				<a class="btn btn-outline-dark loam-guide-button" role="button" href="websites/"><i class="fas fa-book"></i> Website Setup Guide</a>
-				<hr/>
-				<p class="loam-copy">Copyright &copy; 2019 Loam LLC - all rights reserved. Trademarks belong to their respective owners.</p>
-				<br/>
-				<br/>
+				<p class="loam-website-pane-text">A simple, single-page site designed to showcase projects as single cards. You can add more rows of projects as necessary, each row featuring up to 3 items!</p>
+			</div>
+			<div class="col-md loam-section">
+				<h3 class="loam-section-subtitle"><strong>The Product</strong></h3>
+				<img class="loam-website-preview" src="websites/product.png" alt="A picture of a website designed to feature a single product">
+				<div class="loam-sitecard-links">
+					<a class="btn btn-outline-dark" role="button" href="websites/product"><i class="fas fa-laptop-code"></i> Demo</a>
+					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1zdWWIr4jraz69oFzxNp0FfdiYsMFDC5t"><i class="fas fa-file-download"></i> Download</a>
+				</div>
+				<p class="loam-website-pane-text">A colorful single-page site designed to highlight a specific tool or product. While it's designed for 2 columns only, more can be added to highlight specific features or add other page links!</p>
+			</div>
+			<div class="col-md loam-section">
+				<h3 class="loam-section-subtitle"><strong>Service Showcase</strong></h3>
+				<img class="loam-website-preview"  src="websites/service.png" alt="A picture of a website designed to showcase a series of products or a service">
+				<div class="loam-sitecard-links">
+					<a class="btn btn-outline-dark" role="button" href="websites/service"><i class="fas fa-laptop-code"></i> Demo</a>
+					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=15lVFIhObue0iIBHKUC3XU4qhR2MDpbFV"><i class="fas fa-file-download"></i> Download</a>
+				</div>
+				<p class="loam-website-pane-text">A single-page website designed to highlight a series of products or a given service, providing both service or product highlights, and a gallery.</p>
 			</div>
 		</div>
-
-		<!-- Scripts -->
-		<script src="/assets/jquery-3.4.1.min.js"></script>
-		<script src="/assets/bootstrap.bundle.min.js"></script>
-	</body>
-</html>
+	</div>
+	<a class="btn btn-outline-dark loam-guide-button" role="button" href="websites/"><i class="fas fa-book"></i> Website Setup Guide</a>
+</div>
