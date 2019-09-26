@@ -25,8 +25,6 @@ All things considered, if you don't care about a custom URL, you're done. Just g
 
 If you're after a custom domain tho, carry on! You'll learn about how to set that up, and a lot more. For this tutorial, gifs will often be demoing the setup of a website called theportfolio.pw, which as the original website for this set of templates!
 
-
-
 ### Configuring GitHub's side for a custom URL:
 
 ![Adding a Custom URL](https://i.imgur.com/NZlhA6a.gif)
@@ -37,8 +35,6 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 - Once enabled, specify your custom domain. 
 - If you look in the repo root, we see a CNAME file was added!
 - It's good practice to add a www.<sitename> variant. You can do this in-browser by clicking the edit button.
-
-
 
 ### Configuring Google Domains
 
@@ -54,8 +50,6 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 
 Google domains is fast. Like, really fast. Realistically, you can probably navigate to your new site right after setting all that up, so go ahead and test that out in incognito/private browsing mode so that we don't have old things cached.
 
-
-
 ### HTTPS (Optional, but not really optional)
 
 At this point, we have your domain hosted at github pages. We have a custom domain rerouting HTTP requests.
@@ -65,7 +59,6 @@ We'll be using cloudflare in order to force connections to be HTTPS. They don't 
 
 We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain. You can skip the first step if you would prefer to make a different Cloudflare account, or use an existing one.
 
-
 ![Setting up HTTPS with Cloudflare part 1](https://i.imgur.com/eFmyvsb.gif)
 [<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/eFmyvsb.gif)
 
@@ -74,9 +67,7 @@ We'll start by making an email to use with Cloudflare. This can be done using on
 - Enter `cloudflare` as the email name, and route it to an email you own already. 
 - As necessary, confirm the email. If you forward to the email you used for registering the domain, no confirmation is necessary.
 
-
 Next, we're going to be setting up a cloudflare account, and fight out way to the console.
-
 
 ![Setting up HTTPS with Cloudflare part 2](https://i.imgur.com/uNvyr7k.gif)
 [<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/uNvyr7k.gif)
@@ -92,7 +83,6 @@ Next, we're going to be setting up a cloudflare account, and fight out way to th
 
 Second to last, we're going to set up an SSL certificate.
 
-
 ![Setting up HTTPS with Cloudflare part 3](https://i.imgur.com/8eG7flT.gif)
 [<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/8eG7flT.gif)
 
@@ -102,7 +92,6 @@ Second to last, we're going to set up an SSL certificate.
 - turn 'Automatic HTTPS Rewrites' on
 
 Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.
-
 
 ![Setting up HTTPS with Cloudflare part 4](https://i.imgur.com/cX9Jsyz.gif)
 [<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/cX9Jsyz.gif)
@@ -115,8 +104,6 @@ Finally, we're going to force everything to be rewritten to HTTPS. Because Secur
 In the crypto tab, if the certificate says "active" and if in the overview tab it says "Status: Active" then you're good to go for HTTPS. Try navigating to your page now! It should say "secure" to the left of the URL.
 
 You're done! Good work!
-
-
 
 ### Afterthoughts
 
