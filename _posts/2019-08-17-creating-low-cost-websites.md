@@ -13,7 +13,7 @@ The only thing to really consider consider buying at some point is a custom doma
 
 The template sites on the [Loam Resources Page](https://loam.net/resources) are hand-written using [Bootstrap](https://getbootstrap.com) and [Font Awesome](https://fontawesome.com) for actual page content. Bootstrap is an open source toolkit that makes things look not as terrible when you resize a page, and provides some nice defaults. Font Awesome, on the other hand, is a sweet way to add professionally designed icons to things! In addition, Google's [Material Design](material.io/design/) icons and themes occasionally make an appearance.
 
-For hosting, this tutorial uses [GitHub Pages](https://pages.github.com). If you don't like the idea of fiddling with HTML and just want a theme-maker, you can use their built-in one and skip this tutorial entirely. If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our [services](https://loam.net/services) page or sending us an email to ask about what we can do for you!
+For hosting, this tutorial uses [GitHub Pages](https://pages.github.com). If you don't like the idea of fiddling with HTML and just want a theme-maker, you can use their built-in one and skip this tutorial entirely. If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our [services](https://loam.net/creations) page or sending us an email to ask about what we can do for you!
 
 ### Getting Started
 
