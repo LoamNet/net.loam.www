@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Creating Low-cost Websites
 author: matthew
 specialtag: website-guide
 ---
