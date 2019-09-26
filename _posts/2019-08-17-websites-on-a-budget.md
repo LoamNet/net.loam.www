@@ -1,12 +1,12 @@
 ---
 layout: post
 author: matthew
-specialtag: websites-on-a-budget
+specialtag: website-guide
 ---
 
-### About
+This guide aims to provide free or very low cost website setup. While some services appearing in the tutorial may have paid tiers, they never need to be used!
 
-First and foremost, this guide aims to provide free or very low cost website setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
+The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
 
 ### What Tech is Used?
 
@@ -122,6 +122,3 @@ You're done! Good work!
 You'll need to update information in the template that's in this repo. A text editor that does color syntax highlighting for HTML is recommended - Something like Sublime Text, Notepad++, Atom, or many others!
 
 If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download [on their website](https://cesanta.com/binary.html) - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.
-
-
-
