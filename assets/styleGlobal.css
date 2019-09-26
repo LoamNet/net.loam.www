@@ -207,3 +207,15 @@ nav h2:hover {
 @keyframes hovering {
   to { transform: translatey(-30px);}
 }
+
+
+
+
+
+/* Markdown style */
+#loam-markdown img {
+  max-width: 400px;
+  border: 1px solid rgba(115, 105, 100, .7);
+  border-radius: 5px;
+  text-align: left;
+}

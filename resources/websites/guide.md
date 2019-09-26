@@ -3,7 +3,7 @@
 ---
 ### About
 
-First and foremost, this is free of charge and aims to provide free setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services.
+First and foremost, this guide aims to provide free or very low cost website setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
 
 ### What Tech is Used?
 
