@@ -5,7 +5,7 @@ author: matthew
 specialtag: website-guide
 ---
 
-This guide aims to provide free or very low cost website setup. While some services appearing in the tutorial may have paid tiers, they never need to be used!
+This guide aims to provide you with the tools to set up a website for free or at very low cost. While some services appearing in the tutorial may have paid tiers, they never need to be used!
 
 The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
 
