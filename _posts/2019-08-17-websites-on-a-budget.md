@@ -1,15 +1,18 @@
-# Website Setup Guide
-
 ---
+layout: post
+author: matthew
+specialtag: websites-on-a-budget
+---
+
 ### About
 
 First and foremost, this guide aims to provide free or very low cost website setup. While some services appearing in the tutorial may have paid tiers, they never need to be used. The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
 
 ### What Tech is Used?
 
-The template sites on the [Loam Resources Page](https://loam.app/resources) are hand-written using [Bootstrap](https://getbootstrap.com) and [Font Awesome](https://fontawesome.com) for actual page content. Bootstrap is an open source toolkit that makes things look not as terrible when you resize a page, and provides some nice defaults. Font Awesome, on the other hand, is a sweet way to add professionally designed icons to things! In addition, Google's [Material Design](material.io/design/) icons and themes occasionally make an appearance.
+The template sites on the [Loam Resources Page](https://loam.net/resources) are hand-written using [Bootstrap](https://getbootstrap.com) and [Font Awesome](https://fontawesome.com) for actual page content. Bootstrap is an open source toolkit that makes things look not as terrible when you resize a page, and provides some nice defaults. Font Awesome, on the other hand, is a sweet way to add professionally designed icons to things! In addition, Google's [Material Design](material.io/design/) icons and themes occasionally make an appearance.
 
-For hosting, this tutorial uses [GitHub Pages](https://pages.github.com). If you don't like the idea of fiddling with HTML and just want a theme-maker, you can use their built-in one and skip this tutorial entirely. If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our [services](https://loam.app/services) page or sending us an email to ask about what we can do for you!
+For hosting, this tutorial uses [GitHub Pages](https://pages.github.com). If you don't like the idea of fiddling with HTML and just want a theme-maker, you can use their built-in one and skip this tutorial entirely. If you'd like Loam to set up the website for you or provide more customized websites with more features, consider checking out our [services](https://loam.net/services) page or sending us an email to ask about what we can do for you!
 
 ### Getting Started
 
@@ -118,7 +121,7 @@ You're done! Good work!
 
 You'll need to update information in the template that's in this repo. A text editor that does color syntax highlighting for HTML is recommended - Something like Sublime Text, Notepad++, Atom, or many others!
 
-If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download at https://cesanta.com/binary.html - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.
+If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download [on their website](https://cesanta.com/binary.html) - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.
 
 
 

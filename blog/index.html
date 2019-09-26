@@ -1,10 +1,16 @@
 ---
 permalink: /blog/
-layout: secondary-html
+layout: page
 title: Blog
 description: Advice, tutorials, guides, and more! The Loam blog explores trends and content from all sorts of mediums, along with techniques used for various products, and various retrospectives.
 keywords: loam, loam llc, blog, blogging, write, writing, writeup, article, articles, tutorial, tutorials
 ---
 <h1>Blog</h1>
-<div class="container">
-</div>
+<ul class="text-left">
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>

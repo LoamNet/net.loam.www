@@ -1,3 +1,8 @@
+<!--
+This is for markdown-based liquid blog posts.
+
+Blog pages are to be displayed in groups, and generally focus on the post themselves.
+-->
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -11,6 +16,8 @@
 		<br/>
 		<br/>
 		<div class="container items text-left">
+			<h1>{{ page.title }}</h1>
+			<p><strong>{{ page.date | date_to_string }}<!-- - {{ page.author }} --></strong></p>
 			{{ content }}
 			<br/>
 			<br/>
@@ -24,3 +31,4 @@
 		<script src="/assets/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
+
