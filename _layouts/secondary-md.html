@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body>
+		{% include navigation.html %}
+		<!-- Primary content section -->
+		<div class="loam-nav-buffer"></div>
+		<br/>
+		<br/>
+		<div class="container items text-left">
+			{{ content }}
+			<br/>
+			<br/>
+			<br/>
+			<hr/>
+			<p class="loam-copy">Copyright &copy; 2019 Loam LLC - all rights reserved. Trademarks belong to their respective owners.</p>
+		</div>
+
+		<!-- Scripts required for all -->
+		<script src="/assets/jquery-3.4.1.min.js"></script>
+		<script src="/assets/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
