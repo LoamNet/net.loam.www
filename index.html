@@ -7,62 +7,8 @@ keywords: app, apps, loam, indie, applications, software, publishing, indie publ
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<!-- General meta -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{ page.description }}">
-		<meta name="keywords" content="{{ page.keywords }}">
-		<meta name="author" content="Matthew Cech">
-
-		<!-- Page Setup -->
-		<title>{{ page.title }}</title>
-		<link rel="shortcut icon" href="/assets/favicon.ico" />
-
-		<!-- Open Graph (and related) meta -->
-		<meta property="og:site_name" content="Loam">
-		<meta property="og:title" content="Lots of Awesome Media">
-		<meta property="og:description" content="Loam creates games and apps, and helps indie content creators with resources and publishing to help create their own games, apps, art, and other media!">
-		<meta property="og:image" content="https://loam.net/assets/loam.png">
-		<meta property="og:url" content="https://loam.net/">
-		<meta property="og:type" content="website">
-
-		<!-- Twitter (and related) meta -->
-		<meta name="twitter:site" content="@LoamApp">
-		
-		<!-- Bing meta -->
-		<meta name="msvalidate.01" content="E8416603DBD656988DEF0F5979A9D550"/>
-		
-		<!-- Style, Bootstrap, etc -->
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/assets/styleColors.css">
-		<link rel="stylesheet" type="text/css" href="/assets/styleGlobal.css">
-		<link rel="stylesheet" type="text/css" href="/assets/styleLanding.css">
+		{% include head.html %}
 	</head>
-
-	<!-- Google Structured Data. Validate with https://search.google.com/structured-data/testing-tool -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Organization",
-	  "url": "https://loam.net",
-	  "logo": "https://loam.net/assets/loam.png",
-	  "contactPoint": [
-	    { "@type": "ContactPoint",
-	      "telephone": "+1-425-298-6054",
-	      "contactType": "customer service",
-	      "availableLanguage": "English"
-	    },
-	    { "@type": "ContactPoint",
-	      "telephone": "+1-425-298-6054",
-	      "contactType": "technical support",
-	      "availableLanguage": "English"
-	    }
-	  ]
-	}
-	</script>
 
 	<body >
 		{% include navigation.html %}
