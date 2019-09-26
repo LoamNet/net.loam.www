@@ -125,7 +125,7 @@ You're done! Good work!
 
 You'll need to update information in the template that's in this repo. A text editor that does color syntax highlighting for HTML is recommended - Something like Sublime Text, Notepad++, Atom, or many others!
 
-If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download at https://cesanta.com/binary.html - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.
+If you're looking to test the website out locally before launching, a local webserver is quite useful. There's a free, single executable webserver called Mongoose that's available for download [on their website](https://cesanta.com/binary.html) - just plop it in your directory, and double-click to start it! If you're using it for something professional, you'll want to pick up a Pro license for $10.
 
 
 
