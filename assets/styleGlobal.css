@@ -189,7 +189,7 @@ nav h2:hover {
 }
 
 .loam-art-credit a {
-  color: #343A40;/*color: #f8f8f8*/
+  color: #343A40;
 }
 
 /* social button behavior and coloring */
@@ -197,11 +197,23 @@ nav h2:hover {
   width: 46px;
   height: 38px;
 }
+
+.loam-social-post {
+  width: 30px;
+}
+
+.loam-social-post i {
+  margin-left: -6px;
+}
+
 .loam-social-youtube:hover {
   color: rgb(230, 30, 30);
 }
 .loam-social-twitter:hover {
   color: rgb(30, 170, 250);
+}
+.loam-social-clipboard:hover {
+  color: rgb(135, 145, 155);
 }
 
 @keyframes hovering {
@@ -218,4 +230,56 @@ nav h2:hover {
   border: 1px solid rgba(115, 105, 100, .7);
   border-radius: 5px;
   text-align: left;
+}
+
+
+
+
+/* Snackbar code from https://www.w3schools.com/howto/howto_js_snackbar.asp */
+
+#loam-snackbar {
+  visibility: hidden;
+  background-color: #343A40;
+  color: #fff;
+  min-width: 250px;
+  margin-left: -125px;
+  text-align: center;
+
+
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#loam-snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein_snackbar 0.5s, fadeout_snackbar 0.5s 2.5s;
+  animation: fadein_snackbar 0.5s, fadeout_snackbar 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein_snackbar {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein_snackbar {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout_snackbar {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout_snackbar {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }

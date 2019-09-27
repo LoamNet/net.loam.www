@@ -17,9 +17,15 @@ Blog pages are to be displayed in groups, and generally focus on the post themse
 		<br/>
 		<div class="container items text-left">
 			<h1>{{ page.title }}</h1>
-			<p><strong>{{ page.date | date_to_string }}<!-- - {{ page.author }} --></strong></p>
+			<p>
+				<strong>{{ page.date | date_to_string }}<!-- - {{ page.author }} --></strong><br/>
+				<a class="btn loam-social-post loam-social-clipboard" href="#" onclick="writeText(window.location.href.replace('#',''))"><i class="fas fa-link"></i></a>
+			 	<a class="btn loam-social-post loam-social-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20post%20by%20Loam!%20https://loam.net{{ page.url }}"><i class="fab fa-twitter"></i></a>
+			 </p>
 			<br/>
 			{{ content }}
+			<!-- The actual snackbar -->
+			<div id="loam-snackbar"></div>
 			<br/>
 			<br/>
 			<br/>
@@ -31,5 +37,34 @@ Blog pages are to be displayed in groups, and generally focus on the post themse
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>
 	</body>
+	<script type="text/javascript">
+		// Copy to clipboard from https://gist.github.com/lgarron/d1dee380f4ed9d825ca7
+		function writeText(str) {
+			return new Promise(function(resolve, reject) {
+				let success = false;
+			
+				function listener(e) {
+					e.clipboardData.setData("text/plain", str);
+					e.preventDefault();
+					success = true;
+					toast("URL Copied to Clipboard")
+				}
+
+				document.addEventListener("copy", listener);
+				document.execCommand("copy");
+				document.removeEventListener("copy", listener);
+				success ? resolve(): reject();
+			});
+		};
+
+		function toast(message) {
+			let snackbar = document.getElementById("loam-snackbar");
+			snackbar.innerHTML = message;
+
+			// Display for 3 seconds then hide
+			snackbar.className = "show";
+			setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+		}
+	</script>
 </html>
 
