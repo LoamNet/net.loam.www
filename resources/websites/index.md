@@ -3,7 +3,7 @@ permalink: /resources/websites/
 layout: feature
 title: Website Setup Guide
 description: A step by step living guide with pictures that teaches you how to set up a free or very low cost website using Cloudflare, Google Domains, and Github!
-keywords: loam, loam llc, guide, guides, website, site, blog, blogging, webpage, github, github pages, cloudflare, google, google domains
+tags: loam, loam llc, guide, guides, website, site, blog, blogging, webpage, github, github pages, cloudflare, google, google domains
 ---
 {% assign thepost = site.posts | where:"specialtag","website-guide" %}
 {% for post in thepost %}

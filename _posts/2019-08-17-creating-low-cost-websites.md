@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Creating Low-cost Websites
-author: matthew
+author: Matthew
 specialtag: website-guide
+tags: website, site, web, cloudflare, google sites, free, low cost, github, pages, guide, tutorial, loam, post
 ---
 
 This guide aims to provide you with the tools to set up a website for free or at very low cost. While some services appearing in the tutorial may have paid tiers, they never need to be used!
