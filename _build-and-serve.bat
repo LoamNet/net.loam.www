@@ -4,6 +4,7 @@
 set Token=MAIN_%RANDOM%_%CD%
 start "%Token%_1" cmd /c "jekyll build --watch"
 start "%Token%_2" cmd /c "jekyll serve"
+explorer "http://127.0.0.1:4000"
 
 :loop
 
