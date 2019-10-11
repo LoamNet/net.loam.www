@@ -118,6 +118,10 @@ nav h2:hover {
 }
 
 
+.loam-ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
 
 
 
