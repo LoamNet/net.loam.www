@@ -1,0 +1,62 @@
+---
+permalink: /creations/tools/previewmd/
+layout: page
+title: Preview Markdown
+description: For quickly previewing what markdown looks like in the style of the Loam website
+tags: loam, tool, tools, markdown, preview
+---
+<!-- Styleeeee -->
+<style type="text/css">
+	#form-box {
+		margin-top: 1em;
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	#form-button {
+		padding-top: 20px; padding-bottom: 20px;
+	}
+
+	#markdown-preivew{
+		text-align: left;
+	}
+</style>
+
+<!-- Form view (Buttons support drag and drop by default so I don't need a load of JS for that) -->
+<h1>Preview Markdown</h1>
+<form id="form-box" runat="server">
+	<input id="form-button" type='file' class="btn btn-outline-dark" onchange="readURL(this);"/>
+</form>
+
+<!-- Shove file here or somethin' -->
+<div id="markdown-preivew">
+	<p>Once you upload a file, it'll show up here!</p>
+</div>
+
+<!-- Showdown for markdown display -->
+<script src="showdown.min.js"></script>
+
+<!-- Read in and display the file -->
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+            
+            reader.onload = function (e) {
+                DisplayMarkdown(e.target.result);
+            }
+            
+            reader.readAsText(input.files[0]);
+        }
+    }
+
+    // Displays the markdown
+    function DisplayMarkdown(content) {
+		let target = document.getElementById('markdown-preivew');
+		let converter = new showdown.Converter();
+
+		if (target) {
+			target.innerHTML = converter.makeHtml(content);
+		}
+      }
+</script>
