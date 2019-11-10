@@ -219,6 +219,9 @@ nav h2:hover {
 .loam-social-clipboard:hover {
   color: rgb(135, 145, 155);
 }
+.loam-social-donate:hover {
+  color: rgb(120, 200, 140);
+}
 
 @keyframes hovering {
   to { transform: translatey(-30px);}
