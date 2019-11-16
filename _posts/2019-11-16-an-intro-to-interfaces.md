@@ -169,6 +169,6 @@ With the tools above, you should be able to start using interfaces in your exist
 
 
 Looking for more examples or information on interfaces? Check out the following:
-— Geeks for geeks has a [Java centric interface article](https://www.geeksforgeeks.org/interfaces-in-java/) with more software engineering language in it, and demonstrates more common Java use cases.
-— Wikipedia provides a [broad overview of interfaces](https://en.wikipedia.org/wiki/Interface_(computing) as a concept as they apply to both hardware and software. This broader explanation helps provide a lot of practical examples.
-— A concept that shows up a lot in the wild that uses interfaces is an API or Application Programming Interface. You can get a decent overview of what APIs are and how they can be used through the more technically dense [API overview and example page over at Red Hat](https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces)
+- Geeks for geeks has a [Java centric interface article](https://www.geeksforgeeks.org/interfaces-in-java/) with more software engineering language in it, and demonstrates more common Java use cases.
+- Wikipedia provides a [broad overview of interfaces](https://en.wikipedia.org/wiki/Interface_(computing)) as a concept as they apply to both hardware and software. This broader explanation helps provide a lot of practical examples.
+- A concept that shows up a lot in the wild that uses interfaces is an API or Application Programming Interface. You can get a decent overview of what APIs are and how they can be used through the more technically dense [API overview and example page over at Red Hat](https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces)
