@@ -6,6 +6,8 @@ tags: interfaces, Java, programming, loose coupling, interface, intro, modular, 
 ---
 In programming, interfaces are essentially a way to promise that a piece of code perform specific actions. Coming up with a use case while learning about them can be a bit tough tho, so let's see what we can do about that with some examples in Java!
 
+###A Practical Example
+
 Lets jump right in with a little bit of code - Here's an interface I've created called IDisplayable that we'll be using:
 ```java
 public interface IDisplayable {
@@ -15,13 +17,13 @@ public interface IDisplayable {
 ```
 You'll notice that it looks a lot like classes or structures at a glancece; however, interfaces use the `interface` keyword, and the functions usually don't have any sort of body. Instead, the names of functions in an interface are effectively functions that are guaranteed to exist when you interact with it.
 
+Using those rules, I created an interface that specifies information to display, gave it two functions, `string getTitle()` and `string getContent()`, and named it `IDisplayable`. Remember, functions inside of interfaces generally do not provide implementations of the functions they're guaranteeing. I've also gone ahead and put an `I` in front of the interface name to help me know it's an interface when looking at my code later.
+
+###Using the Interface
+
 When writing code that can actually provide the requirements that an interface lays out, we call that an object that _implements_ the interface. In a lot of languages, this is done at the same place you give the class a name, as follows: `public class MyClass implements SomeInterface`. In your coding adventures, you might have noticed that sometimes classes inherit from other classes, but they can only inherit from one. Interfaces don't have the same restriction, and you're allowed to implement as many as you want! (In java, we separate multiple interfaces with commas, like `public class MyClass implements Interface1, Interface2`). 
 
-Using the ideas above, I created the  Below, we're creating an interface called Displayable, and give it two functions: `getTitle()` and `getContent()`, both of which will give us a string. Remember, functions inside of interfaces generally do not provide implementations of the functions they're guaranteeing. I've also gone ahead and put an `I` in front of the interface name to help me know it's an interface when looking at my code later.
-
-
-
-Alright! Now that we've got that, we can now go ahead and start to do things based on what we know an Displayable to have. In this case, I'll be making a function called `display(Displayable display)` that writes out a bit of info for me as two lines: a title and some content.
+Sinec we have our interface, we can now go ahead and start to do things based on what we know an IDisplayable will have. In this case, I'll be making a function called `display(Displayable display)` that writes out a bit of info for me as two lines: a title and some content.
 
 ```java
 public static void display(Displayable display) {
