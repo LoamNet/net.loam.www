@@ -6,7 +6,7 @@ tags: interfaces, Java, programming, loose coupling, interface, intro, modular, 
 ---
 In programming, interfaces are essentially a way to promise that a piece of code perform specific actions. Coming up with a use case while learning about them can be a bit tough tho, so let's see what we can do about that with some examples in Java!
 
-###A Practical Example
+### A Practical Example
 
 Lets jump right in with a little bit of code - Here's an interface I've created called IDisplayable that we'll be using:
 ```java
@@ -19,7 +19,7 @@ You'll notice that it looks a lot like classes or structures at a glancece; howe
 
 Using those rules, I created an interface that specifies information to display, gave it two functions, `string getTitle()` and `string getContent()`, and named it `IDisplayable`. Remember, functions inside of interfaces generally do not provide implementations of the functions they're guaranteeing. I've also gone ahead and put an `I` in front of the interface name to help me know it's an interface when looking at my code later.
 
-###Using the Interface
+### Using the Interface
 
 When writing code that can actually provide the requirements that an interface lays out, we call that an object that _implements_ the interface. In a lot of languages, this is done at the same place you give the class a name, as follows: `public class MyClass implements SomeInterface`. In your coding adventures, you might have noticed that sometimes classes inherit from other classes, but they can only inherit from one. Interfaces don't have the same restriction, and you're allowed to implement as many as you want! (In java, we separate multiple interfaces with commas, like `public class MyClass implements Interface1, Interface2`). 
 
