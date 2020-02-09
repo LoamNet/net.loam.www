@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2020 Android Development Phones
+title: 2020 Android Test Devices
 author: Matthew
 tags: dev, development, android, phone, mobile, app, game, hardware, guide, tutorial, loam, post, blog, pixel, google, samsung, zte
 ---
