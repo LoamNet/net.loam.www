@@ -5,7 +5,7 @@ author: Matthew
 tags: dev, development, android, phone, mobile, app, game, hardware, guide, tutorial, loam, post, blog, pixel, google, samsung, zte
 ---
 
-If you're testing a mobile game, making sure it works on several different devices is important. This guide aims to recommend a few phones at various performance levels to help test what's out there, based on the distribution of devices in the US at the start of 2020.
+If you're testing a mobile game or app, making sure it works on several different devices is important. This guide aims to recommend a few phones at various performance levels to help test what's out there, based on the distribution of devices in the US at the start of 2020.
 
 If you own an android phone already, it likely fills one of the existing tiers on this list. If you don't mind using your own phone for that tier, then you can skip out on getting one for testing! Often, there are used versions of the phones listed below on eBay or other sites that sell used hardware as well.  
 
