@@ -2,7 +2,7 @@
 layout: post
 title: An Intro to Interfaces
 author: Matthew
-tags: interfaces, Java, programming, loose coupling, interface, intro, modular, example, introduction, tutorial, guide
+tags: interfaces, Java, programming, loose coupling, interface, intro, modular, example, introduction, tutorial, guide, blog
 ---
 In programming, interfaces are essentially a way to promise that a piece of code perform specific actions. Coming up with a use case while learning about them can be a bit tough tho, so let's see what we can do about that with some examples in Java!
 
