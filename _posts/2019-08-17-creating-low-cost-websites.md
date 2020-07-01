@@ -47,7 +47,7 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 - Scroll all the way down to the records section
 - Add an `A` name record for both of github's IP addresses: This way, we point the base site at github pages.
   - ~~Github IPs are `192.30.252.154` and `192.30.252.153` at the time of writing.~~
-  - **2020 UPDATE:** Github's recommended IP addresses changed to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. You don't have to use all when configuring the a name records, but the more you use, the better. The process for specifying them is in google domains still the same otherwise.
+  - **2020 UPDATE:** Github's recommended IP addresses changed to (`185.199.108.153`), (`185.199.109.153`), (`185.199.110.153`), and (`185.199.111.153`). You don't have to use all when configuring the a name records, but the more you use, the better. The process for specifying them is in google domains still the same otherwise.
 - Add a CNAME record, with `www` filled in as the record name. We will direct this to the domain itself, just without the www
 
 Google domains is fast. Like, really fast. Realistically, you can probably navigate to your new site right after setting all that up, so go ahead and test that out in incognito/private browsing mode so that we don't have old things cached. Worst case, this will take an hour.
