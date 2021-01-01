@@ -6,7 +6,7 @@ start bundle install
 timeout 2
 start "%Token%_1" cmd /c "jekyll build --watch"
 timeout 2
-start "%Token%_2" cmd /c "jekyll serve"
+start "%Token%_2" cmd /c "bundle exec jekyll serve"
 timeout 2
 explorer "http://127.0.0.1:4000"
 
