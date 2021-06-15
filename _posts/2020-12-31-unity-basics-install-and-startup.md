@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity Basics - Install and Startup
-author: Matthew
+author: Loam
 tags: unity, guide, game, gamedev, tutorial, app
 ---
 Looking for help installing and setting up a Unity for the first time or just need a refresher on the editor? Then this is the guide for you! This guide is tailored to what you experience as a first time unity user. 
