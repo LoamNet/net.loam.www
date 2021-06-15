@@ -43,12 +43,13 @@ tags: resource, resources, tutorial, tutorials, website, websites, loam, loam ll
 		margin-right: auto;
 	}
 </style>
-<h1>Resources</h1>
-<p class="maxed">Various things to help you get your projects up and running!</p>
+
+
+
+<h1>Templates</h1>
 <div id="resources-websites">
 	<br/>
-	<h2 class="loam-section-title"><strong>Website Templates</strong></h2>
-	<p class="loam-section-description text-left">We've got free website templates to help you get something up and running fast, and a guide to help you with your setup! The guide is designed to help provide free or very low cost setup, and goes hand-in-hand with the demo templates provided.</p>
+	<p class="loam-section-description text-left">Some template websites I've put together that are free to use, modify, and publish elsewhere.</p>
 	<div class="container loam-website-preivews">
 		<div class="row">
 			<div class="col-md loam-section">
@@ -80,5 +81,21 @@ tags: resource, resources, tutorial, tutorials, website, websites, loam, loam ll
 			</div>
 		</div>
 	</div>
-	<a class="btn btn-outline-dark loam-guide-button" role="button" href="websites/"><i class="fas fa-book"></i> Website Setup Guide</a>
+	<a class="btn btn-outline-dark loam-guide-button" role="button" href="/2019/08/17/creating-low-cost-websites.html"><i class="fas fa-book"></i> Website Setup Guide</a>
+
+
+
+<br/>
+<h1>Guides</h1>
+<p class="loam-section-description"></p>
+<ul class="text-left loam-ul" style="list-style-type: none;">
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2><p><strong>{{ post.date | date_to_string }}</strong></p>
+      <p>{{ post.excerpt }}</p>
+      <br/>
+    </li>
+  {% endfor %}
+</ul>
+
 </div>

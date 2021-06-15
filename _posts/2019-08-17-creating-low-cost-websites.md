@@ -8,7 +8,7 @@ tags: website, site, web, cloudflare, google sites, free, low cost, github, page
 
 This guide aims to provide you with the tools to set up a website for free or at very low cost. While some services appearing in the tutorial may have paid tiers, they never need to be used!
 
-The only thing to really consider consider buying at some point is a custom domain though Google Domains. We're not paid to recommend them, we're just familiar with their services and they have reasonable pricing and a nice set of services!
+The only thing to really consider consider buying at some point is a custom domain though Google Domains, the main reason being that I'm familiar with their services and they have reasonable pricing.
 
 ### What Tech is Used?
 
@@ -28,8 +28,8 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 
 ### Configuring GitHub's side for a custom URL:
 
-![Adding a Custom URL](https://i.imgur.com/NZlhA6a.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/NZlhA6a.gif)
+![Adding a Custom URL](/assets/blog/2019-08-17/01CustomURL.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/01CustomURL.gif)
 
 - Head to repo settings
 - Find the secion about github pages. If you have not enabled it, do so, probably on master branch. (Stop here if you don't want a custom domain!)
@@ -39,8 +39,8 @@ If you're after a custom domain tho, carry on! You'll learn about how to set tha
 
 ### Configuring Google Domains
 
-![Setting up Google Domains](https://i.imgur.com/Nn929du.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/Nn929du.gif)
+![Setting up Google Domains](/assets/blog/2019-08-17/02GoogleDomainsSetup.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/02GoogleDomainsSetup.gif)
 
 - Go to domains.google.com and navigate to the domain you wish to point at github.
 - Head to the DNS tab (second from the right, looks like stacked boxes)
@@ -61,8 +61,8 @@ We'll be using cloudflare in order to force connections to be HTTPS. They don't 
 
 We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain. You can skip the first step if you would prefer to make a different Cloudflare account, or use an existing one.
 
-![Setting up HTTPS with Cloudflare part 1](https://i.imgur.com/eFmyvsb.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/eFmyvsb.gif)
+![Setting up HTTPS with Cloudflare part 1](/assets/blog/2019-08-17/03CloudflarePt1.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/03CloudflarePt1.gif)
 
 - Go to domains.google.com and navigate to the domain you've been using for this
 - Click on the mail tab, second from the left, and scroll down. 
@@ -71,8 +71,8 @@ We'll start by making an email to use with Cloudflare. This can be done using on
 
 Next, we're going to be setting up a cloudflare account, and fight out way to the console.
 
-![Setting up HTTPS with Cloudflare part 2](https://i.imgur.com/uNvyr7k.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/uNvyr7k.gif)
+![Setting up HTTPS with Cloudflare part 2](/assets/blog/2019-08-17/04CloudflarePt2.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/04CloudflarePt2.gif)
 
 - Head to Cloudflare.com
 - Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.
@@ -85,8 +85,8 @@ Next, we're going to be setting up a cloudflare account, and fight out way to th
 
 Second to last, we're going to set up an SSL certificate.
 
-![Setting up HTTPS with Cloudflare part 3](https://i.imgur.com/8eG7flT.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/8eG7flT.gif)
+![Setting up HTTPS with Cloudflare part 3](/assets/blog/2019-08-17/05CloudflarePt3.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/05CloudflarePt3.gif)
 
 - In cloudflare, head to the Crypto tab at the top
 - Under SSL at the top, select 'flexible' from the drop down. We're going to need a flexible certificate. 
@@ -95,8 +95,8 @@ Second to last, we're going to set up an SSL certificate.
 
 Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.
 
-![Setting up HTTPS with Cloudflare part 4](https://i.imgur.com/cX9Jsyz.gif)
-[<br/><i class="fas fa-expand-arrows-alt"></i>](https://i.imgur.com/cX9Jsyz.gif)
+![Setting up HTTPS with Cloudflare part 4](/assets/blog/2019-08-17/06CloudflarePt4.gif)
+[<br/><i class="fas fa-expand-arrows-alt"></i>](/assets/blog/2019-08-17/06CloudflarePt4.gif)
 
 - Head to the page rules tab at the top
 - Create a new page rule for "Enforce HTTPS"
