@@ -31,8 +31,8 @@ tags: games, art, media, app, apps, loam, indie, applications, software, dev, de
 			</div-->
 
 			<div>
-				<a class="btn btn-outline-dark" href="/art">Art</a>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i>&emsp;
-				<a class="btn btn-outline-dark" href="/games">Games</a>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i>&emsp;
+				<a class="btn btn-outline-dark" href="/art">Art</a>
+				<a class="btn btn-outline-dark" href="/games">Games</a>
 				<a class="btn btn-outline-dark" href="/resources">Resources</a>
 			</div>
 
@@ -40,21 +40,43 @@ tags: games, art, media, app, apps, loam, indie, applications, software, dev, de
 			<p class="loamDivider"><i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i></p>
 
 			<div class="row">
-
 				<div class="col"></div>
 				<div class="col-6">
-					<h2>Commissions</h2>
-				<p>Interested in some paper, art, or some game work? Let me know!</p>
+					<h2>Contact & Commissions</h2>
+				<p>Interested in comissioning custom art, stationery, or some game work? Let me know!</p>
 				</div>
 				<div class="col"></div>
 			</div>
 
+			<p style="max-width: 320px; margin-left: auto; margin-right: auto; text-align: left;">						
+				<form style="max-width: 320px; margin-left: auto; margin-right: auto; text-align: left;"
+				  action="https://formspree.io/xnqdbzjk"
+				  method="POST"
+				>
+				  <label>
+				    <strong>Email</strong><br/>
+				    <span style="font-size: .8em;"><em>I need it to be able to contact you!</em></span>
+				    <input style="width: 100%;" type="email" name="contact" required>
+				  </label>
+				  <br/>
+				  <label>
+				    <strong>Commission request or question:</strong><br/>
+				    <textarea style="width: 100%; width: 320px;" name="message"></textarea>
+				  </label>
+				<br/>
+				  <!-- your other form fields go here -->
+
+				  <button class="btn btn-outline-dark" type="submit">Submit</button>
+				</form>
+			</p>
 
 		<br/>
 		<br/>
 		<br/>
-		</div> <!-- /Container -->
+
+		{% include footer.html %}
 		
+		</div> <!-- /Container -->
 		<!-- bootstrap, jquery, and scripts for loading -->		
 		<script src="/assets/jquery-3.4.1.min.js"></script>
 		<script src="/assets/bootstrap.bundle.min.js"></script>		
