@@ -6,51 +6,493 @@ description: Paintings, watercolors, and other sorts of art
 tags: art, artist, artistic, interactive, software, publishing, published, publish, free, paid, service, services, help, assistance, commission, commissions
 ---
 
-<img src="/assets/icons/icon-inkscraps.png" style="position: absolute; top: 100px; left: 20px; opacity: 0.1;" />
+<style type="text/css">
+	
+/* ---------- Start Modal config ---------- */
+
+.ink-panel {
+	display: inline-block;
+
+	border-radius: 5px;
+
+	max-width: 210px;
+	background-color: rgba(100, 70, 70, .075);
+	margin: 5px;
+
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+.ink-modal {
+	display: none;
+	overflow: auto;
+	padding-top: 100px;
+	z-index: 1;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	transition: 10s;
+
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-family: 'Pangolin', sans-serif;
+}
+
+.modal-content, #modal-caption { 
+  animation-name: zoom;
+  animation-duration: 0.2s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+#modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#modal-close:hover,
+#modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/* ---------- End Modal config ---------- */
+
+.ink-caption {
+	line-height: 1.25em;
+	text-align: left;
+
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ink-body {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+#ink-logo {
+	max-width: 130px;
+
+	margin: 10px;
+}
+
+.ink-text-link {
+	font-size: 16px;
+	opacity: 0.6;
+	font-family: 'Lato', sans-serif;
+}
+
+.ink-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.ink-text-title {
+	padding-top: 20px;
+	font-family: 'IM Fell English SC', serif;
+	color: rgb(40, 40, 40);
+	display: inline-block;
+}
+
+.ink-text-title h1 {
+	margin: 0px;
+	font-size: 25px;
+}
+
+.ink-text-subtitle {
+	font-family: 'IM Fell English SC', serif;
+	color: rgb(40, 40, 40);
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+
+.ink-main {
+	position:relative;
+}
+
+.ink-break {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 600px;
+}
+
+.ink-noselect {
+	/* from https://stackoverflow.com/a/4407335 */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+									supported by Chrome and Opera */
+}
+
+.ink-footer-text {
+	opacity: 0.5;
+	font-family: 'Lato', sans-serif;
+	font-size: .8em;
+	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+.ink-item-img {
+	max-width: 200px;
+	border: 2px solid white;
+	border-radius: 200px;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+
+hr {
+	opacity: .75;
+}
+
+/* ---------- Image Display Grid ---------- */
+
+.flexgrid-row {
+	display: -ms-flexbox;
+	display: flex;
+
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	padding: 0 4px;
+	max-width: 930px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 4 col */
+.flexgrid-column {
+	-ms-flex: 25%;
+	flex: 25%;
+
+	max-width: 25%;
+	padding: 0 4px;
+}
+
+.flexgrid-column img {
+	margin-top: 8px;
+	vertical-align: middle;
+}
+
+/* Stack double */
+@media screen and (max-width: 800px) {
+	.flexgrid-column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+/* Stack single */
+@media screen and (max-width: 600px) {
+	.flexgrid-column {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+
+/* ---------- Specific Tiled Image ---------- */
+
+
+.ink-displayable {
+	cursor: pointer;
+	transition: 0.2s;
+	width:100%;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+	margin-top: 0px !important;
+}
+
+.ink-displayable:hover {
+	filter: brightness(120%);
+}
+
+/* ---------- Tables ---------- */
+
+.ink-table {
+	border-style: solid;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 5px;
+	border-color: lightgrey;
+}
+
+.ink-table-td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+}
+
+.ink-table img {
+	max-height: 120px;
+	border-radius: 7px;
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+	margin: 5px;
+}
+
+.ink-table-th {
+	vertical-align: top;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+</style>
+
+
+<img src="/assets/icons/icon-inkscraps.png" draggable="false" style="z-index: -1; position: fixed; top: 100px; left: 20px; opacity: 0.1;" />
 <br/>
-<h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2>
-<div>
-	<p class="loam-section-description"></p>
-	<ul class="text-left loam-ul" style="list-style-type: none;">
 
-		<li>
-			<div class="row">
-				<div class="col-lg-3 text-center">
-					<img class="product-logo" src="/assets/icons/icon-inkscraps.png" alt="A piece of candy with a ring around it, mimicing the ring around saturn"/>
-				</div>
-				<div class="col-lg-9">
-					<br/>
-					<h2>Ink Scraps - Art and Stationery</h2><p><strong><a href="http://inkscraps.com/">Online Store</a></strong></p>
-					<p>Ink Scraps is an online store selling one-off watercolor artworks, limited run stationery, and papercrafts. All products are made by hand out of recycled materials recycled materials, and ship Internationally. To inquire about a specific piece or a custom order, please visit <a href="https://inkscraps.com/">inkscraps.com</a>.</p>
-				</div>
-			</div>
-			<br/>
-		</li>
+<!-- Section title -->
+<div class="ink-hr">
+	<hr/>
+	<h2><strong>Inventory &amp; Commissions</strong></h2>
+	<p style="max-width: 320px; margin-left: auto; margin-right: auto; text-align: left;">						
+		<form style="max-width: 320px; margin-left: auto; margin-right: auto; text-align: left;"
+		  action="https://formspree.io/xnqdbzjk"
+		  method="POST"
+		>
+		  <label>
+		    <strong>Email</strong><br/>
+		    <span style="font-size: .8em;"><em>I need it to be able to contact you!</em></span>
+		    <input style="width: 100%;" type="email" name="contact" required>
+		  </label>
+		  <br/>
+		  <label>
+		    <strong>Commission request or question:</strong><br/>
+		    <textarea style="width: 100%; width: 320px;" name="message"></textarea>
+		  </label>
+		<br/>
+		  <!-- your other form fields go here -->
 
-	<br/>
-	</ul>
+		  <button class="btn btn-outline-dark" type="submit">Submit</button>
+		</form>
+	</p>
 </div>
+<hr style="max-width: 320px;"/>
+
+<!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
 <h2 class="loam-section-title"><strong>Watercolors</strong></h2>
+
+<!-- Gallery -->
 <div>
-	<p class="loam-section-description"></p>
-	<ul class="text-left loam-ul" style="list-style-type: none;">
-
-		<li>
-			<div class="row">
-				<div class="col-lg-3 text-center">
-					<img class="product-logo" src="/assets/icons/icon-inkscraps.png" alt="A piece of candy with a ring around it, mimicing the ring around saturn"/>
-				</div>
-				<div class="col-lg-9">
-					<br/>
-					<h2>Ink Scraps - Art and Stationery</h2><p><strong><a href="http://inkscraps.com/">Online Store</a></strong></p>
-					<p>Ink Scraps is an online store selling one-off watercolor artworks, limited run stationery, and papercrafts. All products are made by hand out of recycled materials recycled materials, and ship Internationally. To inquire about a specific piece or a custom order, please visit <a href="https://inkscraps.com/">inkscraps.com</a>.</p>
-				</div>
-			</div>
-			<br/>
-		</li>
-
-	<br/>
-	</ul>
+	<div class="flexgrid-row"> 
+		<div class="flexgrid-column">
+			<span id="displayed-0"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="displayed-1"></span>
+		</div>  
+		<div class="flexgrid-column">
+			<span id="displayed-2"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="displayed-3"></span>
+		</div>
+	</div>
 </div>
 <br/>
+
+<!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
+<h2 class="loam-section-title"><strong>Stationery</strong></h2>
+
+<!-- Gallery -->
+<div>
+	<div class="flexgrid-row"> 
+		<div class="flexgrid-column">
+			<span id="s-displayed-0"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="s-displayed-1"></span>
+		</div>  
+		<div class="flexgrid-column">
+			<span id="s-displayed-2"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="s-displayed-3"></span>
+		</div>
+	</div>
+</div>
 <br/>
+
+<!-- Modal contents for selecting a displayable image -->
+<div id="modal" class="ink-modal" style="z-index: 10;">
+	<span id="modal-close">&times;</span>
+	<img class="modal-content" id="ink-modal-image">
+	<div id="modal-caption"></div>
+</div>
+
+<!-- Set up the document and visuals -->
+<script language="JavaScript" src="gallery.json"></script>
+<script type="text/javascript">
+	// Variables
+	let columns = 4;
+
+	// Sift through and display all the images in the json file
+	for(let i = 0; i < art.length; i++) {
+		let src = art[i].src;
+		let alt = art[i].alt;
+		let date = art[i].date;
+		let title = art[i].title;
+		let elem = document.getElementById('displayed-' + (i % columns));
+
+		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"><p class="ink-caption">${alt}</p></div>`;
+	}
+
+	// Sift through and display all the images in the json file
+	for(let i = 0; i < stationery.length; i++) {
+		let src = stationery[i].src;
+		let alt = stationery[i].alt;
+		let date = stationery[i].date;
+		let title = stationery[i].title;
+		let elem = document.getElementById('s-displayed-' + (i % columns));
+
+		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"><p class="ink-caption">${alt}</p></div>`;
+	}
+
+	// now that items are displayed, parse them to hook up popup behavior
+	var displayables = document.getElementsByClassName("ink-displayable");
+	var modalImg = document.getElementById("ink-modal-image");
+
+	// Set up displayables for callbacks
+	for (i = 0; i < displayables.length; i++) {
+		let element = displayables[i];
+	
+		element.onclick = function() { 
+			onElementClick(element, true);
+		};
+	}
+
+	// Displays the target image in history
+	function onElementClick(element, writeToHistory) {
+			modal.style.display = "block";
+			modalImg.src = element.src;
+			modalCaption.innerHTML = element.alt;
+
+			if(writeToHistory != null && writeToHistory == true)
+			{
+				let date = element.getAttribute("data-date");
+				let src = element.getAttribute("src");
+				let desc = element.getAttribute("alt");
+				let title = element.getAttribute("data-title");
+				let querystr = `?date=${date}&title=${title.trim().replace(/ /g,"-")}`;
+
+				document.querySelector('meta[property="og:title"').setAttribute("content", title);
+				document.querySelector('meta[property="og:image"').setAttribute("content", "https://drgn.ink/" + src);
+				document.querySelector('meta[property="og:description"').setAttribute("content", desc);
+				document.querySelector('meta[property="og:url"').setAttribute("content", "https://drgn.ink/" + querystr);
+
+				window.history.pushState("Ink Scraps Gallery", "Ink Scraps Gallery", querystr);
+			}
+	}
+
+	// Set up modal interactions
+	let modal = document.getElementById("modal");
+	let modalCaption = document.getElementById("modal-caption");
+	let closeSection = document.getElementById("modal-close");
+	let closeBG = document.getElementById("modal");
+
+	// Modal function binding
+	closeBG.onclick = function() { modal.style.display = "none"; cleanQueryState(); }
+	closeSection.onclick = function() { modal.style.display = "none"; cleanQueryState(); }
+
+	// Parse query string and display the corresponding thing as necessary
+	// Modified from https://stackoverflow.com/a/2091331
+	function getQueryVariable(variable) {
+		let query = window.location.search.substring(1);
+		let vars = query.split('&');
+
+		for (let i = 0; i < vars.length; i++) {
+			let pair = vars[i].split('=');
+			if (decodeURIComponent(pair[0]) == variable) {
+				return decodeURIComponent(pair[1]);
+			}
+		}
+
+		return null;
+	}
+
+	// Remove the query string in the browser window
+	// From http://atodorov.org/blog/2013/01/28/remove-query-string-with-javascript-and-html5/
+	function cleanQueryState() {
+		let uri = window.location.toString();
+		if (uri.indexOf("?") > 0) {
+			let clean_uri = uri.substring(0, uri.indexOf("?"));
+			window.history.replaceState({}, document.title, clean_uri);
+		}
+	}
+
+	// Parse out params and pop up the target image if it exists
+	if(getQueryVariable('date') != null && getQueryVariable('title') != null) {
+		let date = getQueryVariable('date').toLowerCase();
+		let title  = getQueryVariable('title').toLowerCase().replace(/-/g," ");
+
+		for(let i = 0; i < displayables.length; ++i) {
+			let target = displayables[i];
+			let targetDate = target.getAttribute("data-date").toLowerCase();
+			let targetTitle = target.getAttribute("data-title").toLowerCase();
+
+			if(date == targetDate && title == targetTitle) {
+				onElementClick(target, false);
+				break;
+			}
+		}
+	}
+
+</script>

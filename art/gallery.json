@@ -1,0 +1,200 @@
+art = [
+	{
+		"date":"2020-02-29",
+		"title":"Three Fall",
+
+		"src":"images/three fall.jpg",
+		"alt":"Three fall trees changing with the start of the season! For this piece, I used every color available and painted it during part of a 5 hour flight."
+	},
+	{
+		"date":"2020-03-10",
+		"title":"Twisted Old Tree",
+
+		"src":"images/old twisted tree.jpg",
+		"alt":"This twisted old tree is full of tales!",
+	},
+	{
+		"date":"2020-02-08",
+		"title":"Wise old fir",
+
+		"src":"images/wise old fir.jpg",
+		"alt":"An old fir, chatting and providing advice for the younger plants and animals in the area."
+	},
+	{
+		"date":"2020-02-07",
+		"title":"Peaceful Mountains",
+
+		"src":"images/peaceful mountains.jpg",
+		"alt":"At the end of a remote forest stream sits a collection of friendly, snow-tipped mountains."
+	},
+	{
+		"date":"2020-01-26",
+		"title":"Forest Waterfall",
+		
+		"src":"images/forest waterfall.jpg",
+		"alt":"Hidden waterfall in a fir forest, slowly draining a lake above."		
+	},
+	{
+		"date":"2020-01-26",
+		"title":"Crystal Tree",
+		
+		"src":"images/crystal tree.jpg",
+		"alt":"A heavily glazed, rather old and relaxed crystal tree in a lush marsh."		
+	},
+	{
+		"date":"2020-01-20",
+		"title":"Fir Trees",
+		
+		"src":"images/fir trees.jpg",
+		"alt":"Three fir trees just hanging out on a lovely afternoon together!"		
+	},
+	{
+		"date":"2020-01-15",
+		"title":"Blue Leaf Duo",
+
+		"src":"images/blue leaf duo.jpg",
+		"alt":"An experimental blue-leafed duo done on grey paper."
+	},
+	{
+		"date":"2020-01-13",
+		"title":"Watercolor Fall Paints",
+
+		"src":"images/watercolor fall paints.jpg",
+		"alt":"A wider version of the watercolor fall picture, featuring the watercolor paints used."
+	},
+	{
+		"date":"2019-11-21",
+		"title":"Complex-Blue",
+
+		"src":"images/complex blue.png",
+		"alt":"An artistic journal with a small tree growing out of an old, abstract structure on the cover."
+	},
+	{
+		"date":"2019-08-26",
+		"title":"Cliffside-Meander",
+
+		"src":"images/cliffside meander.jpg",
+		"alt":"A foggy cliffside, perfect place for two trees to take a walk."
+	},
+	{
+		"date":"2019-08-21",
+		"title":"Cover-Tree",
+
+		"src":"images/cover tree.jpg",
+		"alt":"A black and white tree on a thicker cover sheet!"
+	},
+	{
+		"date":"2019-08-08",
+		"title":"Black-and-White",
+
+		"src":"images/black and white.jpg",
+		"alt":"A custom black and white doodle"
+	},
+],
+stationery = [
+	{
+		"date":"2019-08-21",
+		"title":"Large-Journal",
+
+		"src":"images/35 page journal.jpg",
+		"alt":"One of the thickest journals I've made to date!"
+	},
+	{
+		"date":"2019-09-16",
+		"title":"Graphite",
+
+		"src":"images/graphite.jpg",
+		"alt":"Some darker colored graphite front and back thicker covers with a hint of warmth to them color-wise!"
+	},
+	{
+		"date":"2019-09-08",
+		"title":"Small-Blue-Jouranl",
+
+		"src":"images/small blue 10 page journal.jpg",
+		"alt":"A smaller blue journal that was my test for a newer type of stronger binding!"
+	},
+	{
+		"date":"2019-09-08",
+		"title":"Blue-Journal",
+
+		"src":"images/blue 20 page journal.jpg",
+		"alt":"A commissioned journal made from the bulk of blue pages and darker blue cover."
+	},
+	{
+		"date":"2019-09-04",
+		"title":"Blue-Paper",
+
+		"src":"images/blue paper 1.jpg",
+		"alt":"A light blue batch of paper for a custom journal!"
+	},
+	{
+		"date":"2019-09-06",
+		"title":"Shadow-Blue",
+
+		"src":"images/shadow blue.jpg",
+		"alt":"A darker, more washed out blue-grey mini batch done for thicker cover pieces."
+	},
+	{
+		"date":"2019-10-13",
+		"title":"Pumpkin-Spice-Paper",
+
+		"src":"images/pumpkin spice paper.jpg",
+		"alt":"In the spirit of everyone who has ever told me they want to eat the paper, figured I'd go for something scented like Pumpkin Spice!"
+	},
+	{
+		"date":"2019-10-09",
+		"title":"Two-Packed",
+
+		"src":"images/two packed.jpg",
+		"alt":"I always enjoy using some of the larger bulk sheets of paper I've made to help pack journals, be it one or more."
+	},
+	{
+		"date":"2019-10-09",
+		"title":"Greydient-Journals",
+
+		"src":"images/greydient journals.jpg",
+		"alt":"One of the most technically challenging commissions I recieved - Everything from ink to acryllic to pigments were explored for this!"
+	},
+	{
+		"date":"2019-10-03",
+		"title":"Grey-Gradient",
+
+		"src":"images/grey gradient.jpg",
+		"alt":"A grey gradient made out of different grey pages, or a grey-dient if you will!"
+	},
+	{
+		"date":"2019-08-30",
+		"title":"Blue-Experiment",
+
+		"src":"images/blue experiment.jpg",
+		"alt":"Speckled thicker blue-ish grey cardstock!"
+	},
+	{
+		"date":"2019-08-26",
+		"title":"Envelope-One",
+
+		"src":"images/envelope one.jpg",
+		"alt":"An envelope made from a thicker, larger sheet of paper."
+	},
+	{
+		"date":"2019-08-18",
+		"title":"40-Pages",
+
+		"src":"images/40 standard sheets.jpg",
+		"alt":"A larger batch of very light 4x6 sheets of paper for a larger custom journal!"
+	},
+	{
+		"date":"2019-07-02",
+		"title":"Raspberry-Sheets",
+
+		"src":"images/raspberry sheets.jpg",
+		"alt":"A handmade batch of 4x6 sheets of raspberry-tinted paper that's sadly not edible"
+	},
+	{
+		"date":"2019-09-09",
+		"title":"Package",
+
+		"src":"images/package.jpg",
+		"alt":"One of the journals I made, all packaged up and ready to be shipped out in the mail!"
+	},
+]
