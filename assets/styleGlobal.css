@@ -7,7 +7,7 @@ body {
   text-align: center;
   margin: 0px;
   padding: 0px;
-  background-color: #f8f8f8;
+background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 h1 {
@@ -25,7 +25,7 @@ nav h1 {
   color: #38322F;
 }
 nav h1:hover {
-  color: #f8f8f8;
+  text-decoration: underline;
 }
 
 nav h2 {
@@ -37,7 +37,7 @@ nav h2 {
   color: #38322F;
 }
 nav h2:hover {
-  color: #f8f8f8;
+  text-decoration: underline;
 }
 
 /* Loam navbar formatting and behavior */
@@ -56,8 +56,8 @@ nav h2:hover {
   padding-bottom: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  box-shadow: inset 0px -20px 5px -20px #38322FA0;
-  background-color: #AEA09B;
+  box-shadow: 0px 0px 3px #38322FA0;
+  background-color: #F9F9FB;
 
   position: fixed;
   top: 0;
