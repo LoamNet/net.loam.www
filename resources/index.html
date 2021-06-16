@@ -2,136 +2,106 @@
 permalink: /resources/
 layout: page
 title: Resources
-description: Looking to get started with your own projects? Loam has a whole variety of resources to help you kickstart your project, be it a website, app, game, or something else! We're constantly adding more free media, guides and tutorials!
-tags: resource, resources, tutorial, tutorials, website, websites, loam, loam llc, portfolio, product, bootstrap, javascript, cloudflare, github, guide, beginner
+description: A collection of guides, tools, and templates adapted from a bunch of games and projects
+tags: asset, assets, resource, resources, tutorial, tutorials, guide, websites, beginner, help
 ---
-<style type="text/css">
-	.loam-sitecard-links {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
-	}
 
-	.loam-website-preivews {
-		margin-bottom: 1em;
-	}
-
-	.loam-website-preview {
-		max-width: 300px;
-		border: 1px solid rgba(115, 105, 100, .2);
-		border-radius: 5px;
-	}
-
-	.loam-guide-button {
-		margin-bottom: 2em;
-	}
-
-	.loam-section-description {
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 2em;
-	}
-
-	.loam-section {
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
-
-	.loam-website-pane-text {
-		max-width: 420px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-
-	.stub {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 250px;
-		width: 250px;
-	}
-
-	.l-v-spacer {
-		 opacity: 0.3;
-	}
-
-	.product-logo {
-		padding: 30px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-</style>
-
-
-
-<h1>Templates</h1>
-<div id="resources-websites">
-	<br/>
-	<p class="loam-section-description text-left">Some template websites I've put together that are free to use, modify, and publish elsewhere.</p>
-	<div class="container loam-website-preivews">
+<br/>
+<div id="templates" style="position: absolute; top: 0px;"></div>
+<h2 class="loam-section-title"><strong>Templates</strong></h2>
+<ul class="text-left loam-ul">
+	<li>
 		<div class="row">
-			<div class="col-md loam-section">
-				<h3 class="loam-section-subtitle"><strong>The Portfolio</strong></h3>
-				<img class="loam-website-preview" src="websites/portfolio.png" alt="A picture of a website designed to be a personal portfolio">
-				<div class="loam-sitecard-links">
+			<div class="col-lg-3 text-center">
+				<img class="product-logo" src="websites/portfolio.png" alt="A picture of a website designed to be a personal portfolio">
+			</div>
+			<div class="col-lg-9">
+				<br/>
+				<h2>The Portfolio</h2>
+				<p>
 					<a class="btn btn-outline-dark" role="button" href="websites/portfolio"><i class="fas fa-laptop-code"></i> Demo</a>
 					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1eS-ltScOMOC_e-Aqgx-kzXMKkaILmtzY"><i class="fas fa-file-download"></i> Download</a>
-				</div>
-				<p class="loam-website-pane-text text-left">A simple, single-page site designed to showcase projects as single cards. You can add more rows of projects as necessary, each row featuring up to 3 items.</p>
-			</div>
-			<div class="col-md loam-section">
-				<h3 class="loam-section-subtitle"><strong>The Product</strong></h3>
-				<img class="loam-website-preview" src="websites/product.png" alt="A picture of a website designed to feature a single product">
-				<div class="loam-sitecard-links">
-					<a class="btn btn-outline-dark" role="button" href="websites/product"><i class="fas fa-laptop-code"></i> Demo</a>
-					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1zdWWIr4jraz69oFzxNp0FfdiYsMFDC5t"><i class="fas fa-file-download"></i> Download</a>
-				</div>
-				<p class="loam-website-pane-text text-left">A colorful single-page site designed to highlight a specific tool or product. While it's designed for 2 columns only, more can be added to highlight specific features or add other page links.</p>
-			</div>
-			<div class="col-md loam-section">
-				<h3 class="loam-section-subtitle"><strong>Service Showcase</strong></h3>
-				<img class="loam-website-preview"  src="websites/service.png" alt="A picture of a website designed to showcase a series of products or a service">
-				<div class="loam-sitecard-links">
-					<a class="btn btn-outline-dark" role="button" href="websites/service"><i class="fas fa-laptop-code"></i> Demo</a>
-					<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=15lVFIhObue0iIBHKUC3XU4qhR2MDpbFV"><i class="fas fa-file-download"></i> Download</a>
-				</div>
-				<p class="loam-website-pane-text text-left">A single-page website designed to highlight a series of products or a given service, providing both service or product highlights, and a gallery.</p>
+					<br/><span style="font-size: .7em">Released <span style="opacity: .4;">v1.1</span></span>
+				</p>
+				<p>A simple, single-page site designed to showcase projects as single cards. You can add more rows of projects as necessary, each row featuring up to 3 items.</p>
 			</div>
 		</div>
-	</div>
-	<a class="btn btn-outline-dark loam-guide-button" role="button" href="/2019/08/17/creating-low-cost-websites.html"><i class="fas fa-book"></i> Website Setup Guide</a>
-
-			<p> <i class="fas fa-seedling" aria-hidden="true"></i></p>
-<br/>
-<h1>Guides</h1>
-<p class="loam-section-description"></p>
-<ul class="text-left loam-ul" style="list-style-type: none;">
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2><p><strong>{{ post.date | date_to_string }}</strong></p>
-      <p>{{ post.excerpt }}</p>
-      <br/>
-    </li>
-  {% endfor %}
-</ul>
-			<p> <i class="fas fa-seedling" aria-hidden="true"></i></p>
-<br/>
-<h1>Utilities</h1>
-
-	<ul class="text-left loam-ul">
-		<li>
-			<div class="row">
-				<div class="col-lg-3 text-center">
-					<img class="product-logo" src="/assets/icons/placeholder.png" alt="A grey placeholder logo"/>
-				</div>
-				<div class="col-lg-9">
-					<br/>
-					<h2>Preview MD</h2><p><strong><a href="tools/previewmd/">Web</a></strong><span class="l-v-spacer">&emsp;|&emsp;</span>A markdown preview tool<br/><span style="font-size: .7em">Released <span style="opacity: .4;">v1.0</span></span></p></p>
-					<p>This website uses a good bit of markdown for things like the blog posts, and having a tool to help preview how that looks is useful - you can get a feel for how your markdown looks when parsed and displayed as if it were a post on this site too!</p>
-				</div>
+	</li>
+	<li>
+		<div class="row">
+			<div class="col-lg-3 text-center">
+				<img class="product-logo" src="websites/product.png" alt="A picture of a website designed to feature a single product">
 			</div>
-			<br/>
-		</li>
-	</ul>
-</div>
+			<div class="col-lg-9">
+				<br/>
+				<h2>The Product</h2>
+				<p>
+					<a class="btn btn-outline-dark" role="button" href="websites/product"><i class="fas fa-laptop-code"></i> Demo</a>
+				<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=1zdWWIr4jraz69oFzxNp0FfdiYsMFDC5t"><i class="fas fa-file-download"></i> Download</a>
+					<br/><span style="font-size: .7em">Released <span style="opacity: .4;">v1.0</span></span>
+				</p>
+				<p>A colorful single-page site designed to highlight a specific tool or item. While it's designed for 2 columns only, more can be added to highlight specific features or add other page links.</p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="row">
+			<div class="col-lg-3 text-center">
+				<img class="product-logo" src="websites/service.png" alt="A picture of a website designed to showcase a series of products or a service">
+			</div>
+			<div class="col-lg-9">
+				<br/>
+				<h2>Service Showcase</h2>
+				<p>
+					<a class="btn btn-outline-dark" role="button" href="websites/service"><i class="fas fa-laptop-code"></i> Demo</a>
+				<a class="btn btn-outline-dark" role="button" href="https://drive.google.com/open?id=15lVFIhObue0iIBHKUC3XU4qhR2MDpbFV"><i class="fas fa-file-download"></i> Download</a>
+					<br/><span style="font-size: .7em">Released <span style="opacity: .4;">v1.0</span></span>
+				</p>
+				<p>A single-page website designed to highlight a series of products or a given service, providing both service or product highlights, and a gallery.</p>
+			</div>
+		</div>
+	</li>
+</ul>
+
+
+
+<!-- Horizontal Divider -->
+<div id="utilities"></div>
+<p class="loamDivider"><i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i></p>
+
+
+
+<h2 class="loam-section-title"><strong>Utilities</strong></h2>
+<ul class="text-left loam-ul">
+	<li>
+		<div class="row">
+			<div class="col-lg-3 text-center">
+				<img class="product-logo" src="/assets/icons/placeholder.png" alt="A grey placeholder logo"/>
+			</div>
+			<div class="col-lg-9">
+				<br/>
+				<h2>Preview MD</h2><p><strong><a href="tools/previewmd/">Web</a></strong><span class="l-v-spacer">&emsp;|&emsp;</span>A markdown preview tool<br/><span style="font-size: .7em">Released <span style="opacity: .4;">v1.0</span></span></p>
+				<p>This website uses a good bit of markdown for things like the blog posts, and having a tool to help preview how that looks is useful - you can get a feel for how your markdown looks when parsed and displayed as if it were a post on this site too!</p>
+			</div>
+		</div>
+	</li>
+</ul>
+
+
+
+<!-- Horizontal Divider -->
+<div id="guides"></div>
+<p class="loamDivider"><i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i>&emsp;<i class="fas fa-seedling" aria-hidden="true"></i></p>
+
+
+
+<h2 class="loam-section-title"><strong>Guides</strong></h2>
+<ul class="text-left loam-ul" style="list-style-type: none;">
+	{% for post in site.posts %}
+	<li>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2><p><strong>{{ post.date | date_to_string }}</strong></p>
+		<p>{{ post.excerpt }}</p>
+		<br/>
+	</li>
+	{% endfor %}
+</ul>

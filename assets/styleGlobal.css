@@ -125,77 +125,6 @@ nav h2:hover {
 
 
 
-/* Landing page */
-
-.loam-relative {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  padding: 0px;
-}
-
-.loam-svg {
-  width: 100%;
-  height: 100vh;
-}
-
-.loam-background-video {
-  display: inline-block;
-  vertical-align: middle;
-
-  position: absolute;
-  margin: 0px;
-  padding: 0px;
-
-  left: 50%;
-  top: 50%;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  
-  /* https://pacoup.com/2011/06/12/list-of-true-169-resolutions/ */
-  width: 368px;
-  height: 207px;
-}
-
-#maskLayer {
-  text-align: center;
-}
-
-#maskText {
-  text-align: center;
-  font-family: brandish, serif;
-  font-size: 6.6em;
-  fill:#000;
-  /*text-shadow: 3px 3px 3px #aaaf;*/
-}
-
-.masked {
-    mask:url("#maskLayer");
-}
-.maskedtw {
-    mask:url("#maskLayer");
-}
-/* For divs containing links overlaid on the site */
-.loam-links {
-  position: absolute;
-  z-index: 1;
-  bottom: 15px;
-  right: 15px;
-}
-
-.loam-art-credit {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .65em;
-  position: absolute;
-  z-index: 1;
-  bottom: 10px;
-  left: 15px;
-}
-
-.loam-art-credit a {
-  color: #343A40;
-}
-
 /* social button behavior and coloring */
 .loam-social {
   width: 46px;
@@ -240,9 +169,6 @@ nav h2:hover {
   border-radius: 5px;
   text-align: left;
 }
-
-
-
 
 /* Snackbar code from https://www.w3schools.com/howto/howto_js_snackbar.asp */
 
