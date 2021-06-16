@@ -7,7 +7,7 @@ body {
   text-align: center;
   margin: 0px;
   padding: 0px;
-  background-image: url("assets/cork-wallet.png");
+  background-image: url("/assets/cork-wallet.png");
 }
 
 h1 {
