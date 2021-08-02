@@ -1,5 +1,12 @@
 art = [
 	{
+		"date":"2021-06-08",
+		"title":"Purples",
+
+		"src":"images/purples.jpg",
+		"alt":"A painting done with almost entirely purples on lilac paper"
+	},
+	{
 		"date":"2020-02-29",
 		"title":"Three Fall",
 
@@ -81,7 +88,7 @@ art = [
 		"title":"Cover-Tree",
 
 		"src":"images/cover tree.jpg",
-		"alt":"A black and white tree on a thicker cover sheet!"
+		"alt":"A black and white tree on a thicker cover sheet"
 	},
 	{
 		"date":"2019-08-08",
@@ -93,46 +100,53 @@ art = [
 ],
 stationery = [
 	{
+		"date":"2021-06-01",
+		"title":"Lime",
+
+		"src":"images/lime.jpg",
+		"alt":"A small batch of fibrous lime pages"
+	},
+	{
 		"date":"2019-08-21",
 		"title":"Large-Journal",
 
 		"src":"images/35 page journal.jpg",
-		"alt":"One of the thickest journals I've made to date!"
+		"alt":"One of the thickest journals I've made to date"
 	},
 	{
 		"date":"2019-09-16",
 		"title":"Graphite",
 
 		"src":"images/graphite.jpg",
-		"alt":"Some darker colored graphite front and back thicker covers with a hint of warmth to them color-wise!"
+		"alt":"Some darker colored graphite front and back thicker covers with a hint of warmth to them"
 	},
 	{
 		"date":"2019-09-08",
 		"title":"Small-Blue-Jouranl",
 
 		"src":"images/small blue 10 page journal.jpg",
-		"alt":"A smaller blue journal that was my test for a newer type of stronger binding!"
+		"alt":"A smaller blue journal that was my test for a newer type of stronger binding"
 	},
 	{
 		"date":"2019-09-08",
 		"title":"Blue-Journal",
 
 		"src":"images/blue 20 page journal.jpg",
-		"alt":"A commissioned journal made from the bulk of blue pages and darker blue cover."
+		"alt":"A commissioned journal made from the bulk of blue pages and darker blue cover"
 	},
 	{
 		"date":"2019-09-04",
 		"title":"Blue-Paper",
 
 		"src":"images/blue paper 1.jpg",
-		"alt":"A light blue batch of paper for a custom journal!"
+		"alt":"A light blue batch of paper for a custom journal"
 	},
 	{
 		"date":"2019-09-06",
 		"title":"Shadow-Blue",
 
 		"src":"images/shadow blue.jpg",
-		"alt":"A darker, more washed out blue-grey mini batch done for thicker cover pieces."
+		"alt":"A darker, more washed out blue-grey mini batch done for thicker cover pieces"
 	},
 	{
 		"date":"2019-10-13",
