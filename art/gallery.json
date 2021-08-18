@@ -1,6 +1,13 @@
 art = [
 	{
 		"date":"2021-06-08",
+		"title":"High Desert Flowers",
+
+		"src":"images/high desert flowers.jpg",
+		"alt":"A series of high desert flowers"
+	},
+	{
+		"date":"2021-06-08",
 		"title":"Purples",
 
 		"src":"images/purples.jpg",
@@ -12,6 +19,13 @@ art = [
 
 		"src":"images/three fall.jpg",
 		"alt":"Three fall trees changing with the start of the season! For this piece, I used every color available and painted it during part of a 5 hour flight."
+	},
+	{
+		"date":"2021-08-18",
+		"title":"Blue Fescue",
+
+		"src":"images/blue fescue.jpg",
+		"alt":"A blue fescue grass growing in the high desert"
 	},
 	{
 		"date":"2020-03-10",
