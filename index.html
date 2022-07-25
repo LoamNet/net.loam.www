@@ -11,17 +11,37 @@ tags: games, art, media, app, apps, loam, indie, applications, software, dev, de
 	</head>
 
 	<body>
-		{% include navigation.html %}
-
 		<div class="container">
 			<div class="row" style="margin-top: 100px;">
 				<div class="col-lg"></div>
 				<div class="col-lg">
-					<img class="img-fluid" style="width: 100%; max-width: 240px;" src="/assets/loam.png" alt="Geometric green sprout-shaped logo with a negative space L">
+					<img class="img-fluid" style="width: 100%; max-width: 200px;" src="/assets/loam.png" alt="Geometric green sprout-shaped logo with a negative space L">
 					<br/>
 					<br/>
-					<!--h1 style="font-size: calc(3.5em);">Loam</h1-->	
-					<p>I'm an Indie creator making things both physically and digitally - primarily handmade paper, watercolor, and some games. I've also got some resources posted with tips, tricks, templates, and things I've learned along the way!</p>
+					<div style="width: 100%; display: flex; justify-content: center;">
+						<div style="position: absolute; width: 0px; height: 300px; border: 1px solid #107E5D; margin-left: auto; margin-right: auto;"></div>
+					</div>
+					<div style="width: 100%; height: 100%; display: flex; justify-content: center; pointer-events: none;">
+						<!-- left leaf -->
+						<!-- 40px L tri  --><div style="position: absolute; margin-top: calc(5px + 50px * 2); margin-right: calc(5px + 50px + 80px * 1); width: 0; height: 0; border-top: 40px solid #107E5D; border-left: 40px solid transparent;"></div>
+						<!-- 40px square --><div style="position: absolute; margin-top: calc(5px + 50px * 2); margin-right: calc(5px + 50px + 80px * 0); width: 0; height: 0; border: 20px solid #107E5D;"></div>
+
+						<!-- right leaf -->
+						<!-- 40px R tri  --><div style="position: absolute; margin-top: calc(5px + 50px * 2); margin-left: calc(5px + 50px + 80px * 1); width: 0; height: 0; border-top: 40px solid #107E5D; border-right: 40px solid transparent;"></div>
+						<!-- 40px square --><div style="position: absolute; margin-top: calc(5px + 50px * 2); margin-left: calc(5px + 50px + 80px * 0); width: 0; height: 0; border: 20px solid #107E5D;"></div>
+
+						<!-- left leaf stub -->
+						<!-- 40px square --><div style="position: absolute; margin-top: calc(5px + 50px * 3); margin-right: calc(5px + 50px + 80px * 0); width: 0; height: 0; border: 20px solid #107E5D;"></div>
+
+						<!-- right leaft small tri -->
+						<!-- 40px R tri  --><div style="position: absolute; margin-top: calc(5px + 50px * 3); margin-left: calc(5px + 50px + 80px * 0); width: 0; height: 0; border-top: 40px solid #107E5D; border-right: 40px solid transparent;"></div>
+
+						<!-- left leaft small tri -->
+						<!-- 40px L tri  --><div style="position: absolute; margin-top: calc(5px + 50px * 4); margin-right: calc(5px + 50px + 80px * 0); width: 0; height: 0; border-top: 40px solid #107E5D; border-left: 40px solid transparent;"></div>
+
+						<!-- right leaft small tri -->
+						<!-- 40px R tri  --><div style="position: absolute; margin-top: calc(5px + 50px * 5); margin-left: calc(5px + 50px + 80px * 0); width: 0; height: 0; border-top: 40px solid #107E5D; border-right: 40px solid transparent;"></div>
+					</div>
 				</div>
 				<div class="col-lg"></div>
 			</div>
@@ -30,14 +50,13 @@ tags: games, art, media, app, apps, loam, indie, applications, software, dev, de
 			<a class="btn btn-outline-dark loam-social loam-social-donate" h><i class="fas fa-donate"></i></a>
 			</div-->
 
-			<div>
-				<a class="btn btn-outline-dark" href="/art">Art</a>
-				<a class="btn btn-outline-dark" href="/games">Games</a>
-				<a class="btn btn-outline-dark" href="/resources">Resources</a>
-			</div>
+			<nav>
+				<a class="btn loamButton btn-outline-dark" href="/art">Art</a>
+				<a class="btn loamButton btn-outline-dark" href="/games">Games</a><br/>
+				<a class="btn loamButton btn-outline-dark" href="/resources">Resources</a>
+				<a class="btn loamButton btn-outline-dark" href="/about">About</a>
+			</nav>
 
-			<!-- /Container -->
-			{% include footer.html %}
 
 		</div>
 
