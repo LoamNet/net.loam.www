@@ -12,15 +12,8 @@ tags: art, artist, artistic, interactive, software, publishing, published, publi
 
 .ink-panel {
 	display: inline-block;
-
-	border-radius: 5px;
-
 	max-width: 210px;
-	background-color: rgba(100, 70, 70, .075);
 	margin: 5px;
-
-	border-top: 2px solid white;
-	border-bottom: 2px solid white;
 }
 
 .ink-modal {
@@ -46,6 +39,8 @@ tags: art, artist, artistic, interactive, software, publishing, published, publi
   display: block;
   width: 80%;
   max-width: 700px;
+
+  border-radius: 5px;
 }
 
 #modal-caption {
@@ -252,14 +247,14 @@ hr {
 	transition: 0.2s;
 	width:100%;
 
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-radius: 7px;
+	filter: drop-shadow(2px 2px 4px #11111128);
 
 	margin-top: 0px !important;
 }
 
 .ink-displayable:hover {
-	filter: brightness(120%);
+	filter: brightness(90%);
 }
 
 /* ---------- Tables ---------- */
@@ -296,7 +291,7 @@ hr {
 </style>
 
 
-<img src="/assets/icons/icon-inkscraps.png" draggable="false" style="z-index: -1; position: fixed; top: 100px; left: 20px; opacity: 0.1;" />
+<img src="/assets/icons/icon-inkscraps.png" draggable="false" style="z-index: -1; position: absolute; top: 100px; left: 20px; opacity: 0.1;" />
 <br/>
 
 <!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
@@ -364,7 +359,7 @@ hr {
 		let title = art[i].title;
 		let elem = document.getElementById('displayed-' + (i % columns));
 
-		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"><p class="ink-caption">${alt}</p></div>`;
+		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"></div>`;
 	}
 
 	// Sift through and display all the images in the json file
@@ -375,7 +370,7 @@ hr {
 		let title = stationery[i].title;
 		let elem = document.getElementById('s-displayed-' + (i % columns));
 
-		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"><p class="ink-caption">${alt}</p></div>`;
+		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"></div>`;
 	}
 
 	// now that items are displayed, parse them to hook up popup behavior
