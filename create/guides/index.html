@@ -1,0 +1,23 @@
+---
+permalink: /create/guides/
+layout: page
+title: Guides
+description: A collection of development guides, explorations, turoals
+tags: tutorial, tutorials, guide, guides, beginner, help, programming, dev, development
+---
+
+<br/>
+
+<!-- Horizontal Divider -->
+<div id="guides"></div>
+
+<h2 class="loam-section-title"><strong>Guides</strong></h2>
+<ul class="text-left loam-ul" style="list-style-type: none;">
+	{% for post in site.posts %}
+	<li>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2><p><strong>{{ post.date | date_to_string }}</strong></p>
+		<p>{{ post.excerpt }}</p>
+		<br/>
+	</li>
+	{% endfor %}
+</ul>
