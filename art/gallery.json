@@ -1,10 +1,17 @@
 art = [
 	{
-		"date":"2021-06-08",
-		"title":"High Desert Flowers",
+		"date":"2021-01-11",
+		"title":"Dragonfly",
 
-		"src":"images/high desert flowers.jpg",
-		"alt":"A series of high desert flowers"
+		"src":"images/dragonfly.jpg",
+		"alt":"Decided to try and leverage the coarse paper for grass help so I could instead focus on the dragonfly."
+	},
+	{
+		"date":"2021-01-01",
+		"title":"Treeo",
+
+		"src":"images/treeo.jpg",
+		"alt":"Another exploration of fall colors"
 	},
 	{
 		"date":"2021-06-08",
@@ -14,25 +21,11 @@ art = [
 		"alt":"A painting done with almost entirely purples on lilac paper"
 	},
 	{
-		"date":"2020-02-29",
-		"title":"Three Fall",
-
-		"src":"images/three fall.jpg",
-		"alt":"Three fall trees changing with the start of the season! For this piece, I used every color available and painted it during part of a 5 hour flight."
-	},
-	{
 		"date":"2021-08-18",
 		"title":"Blue Fescue",
 
 		"src":"images/blue fescue.jpg",
 		"alt":"A blue fescue grass growing in the high desert"
-	},
-	{
-		"date":"2020-03-10",
-		"title":"Twisted Old Tree",
-
-		"src":"images/old twisted tree.jpg",
-		"alt":"This twisted old tree is full of tales!",
 	},
 	{
 		"date":"2020-02-08",
@@ -42,39 +35,11 @@ art = [
 		"alt":"An old fir, chatting and providing advice for the younger plants and animals in the area."
 	},
 	{
-		"date":"2020-02-07",
-		"title":"Peaceful Mountains",
-
-		"src":"images/peaceful mountains.jpg",
-		"alt":"At the end of a remote forest stream sits a collection of friendly, snow-tipped mountains."
-	},
-	{
 		"date":"2020-01-26",
 		"title":"Forest Waterfall",
 		
 		"src":"images/forest waterfall.jpg",
 		"alt":"Hidden waterfall in a fir forest, slowly draining a lake above."		
-	},
-	{
-		"date":"2020-01-26",
-		"title":"Crystal Tree",
-		
-		"src":"images/crystal tree.jpg",
-		"alt":"A heavily glazed, rather old and relaxed crystal tree in a lush marsh."		
-	},
-	{
-		"date":"2020-01-20",
-		"title":"Fir Trees",
-		
-		"src":"images/fir trees.jpg",
-		"alt":"Three fir trees just hanging out on a lovely afternoon together!"		
-	},
-	{
-		"date":"2020-01-15",
-		"title":"Blue Leaf Duo",
-
-		"src":"images/blue leaf duo.jpg",
-		"alt":"An experimental blue-leafed duo done on grey paper."
 	},
 	{
 		"date":"2020-01-13",
@@ -84,18 +49,11 @@ art = [
 		"alt":"A wider version of the watercolor fall picture, featuring the watercolor paints used."
 	},
 	{
-		"date":"2019-11-21",
-		"title":"Complex-Blue",
+		"date":"2020-02-29",
+		"title":"Three Fall",
 
-		"src":"images/complex blue.png",
-		"alt":"An artistic journal with a small tree growing out of an old, abstract structure on the cover."
-	},
-	{
-		"date":"2019-08-26",
-		"title":"Cliffside-Meander",
-
-		"src":"images/cliffside meander.jpg",
-		"alt":"A foggy cliffside, perfect place for two trees to take a walk."
+		"src":"images/three fall.jpg",
+		"alt":"Three fall trees changing with the start of the season! For this piece, I used every color available and painted it during part of a 5 hour flight."
 	},
 	{
 		"date":"2019-08-21",
@@ -111,8 +69,44 @@ art = [
 		"src":"images/black and white.jpg",
 		"alt":"A custom black and white doodle"
 	},
+    {
+        "date":"2020-01-20",
+        "title":"Fir Trees",
+        
+        "src":"images/fir trees.jpg",
+        "alt":"Three fir trees just hanging out on a lovely afternoon together!"        
+    },
+	{
+		"date":"2021-02-23",
+		"title":"Spring Buds",
+
+		"src":"images/spring buds.jpg",
+		"alt":"It's always lovely to see ground cover come back as the previously tired sticks spring back to life"
+	},
+
 ],
-stationery = [
+materials = [
+	{
+		"date":"2019-08-18",
+		"title":"40-Pages",
+
+		"src":"images/40 standard sheets.jpg",
+		"alt":"A larger batch of very light 4x6 sheets of paper for a larger custom journal!"
+	},
+	{
+		"date":"2019-09-04",
+		"title":"Blue-Paper",
+
+		"src":"images/blue paper 1.jpg",
+		"alt":"A light blue batch of paper for a custom journal"
+	},
+	{
+		"date":"2019-07-02",
+		"title":"Raspberry-Sheets",
+
+		"src":"images/raspberry sheets.jpg",
+		"alt":"A handmade batch of 4x6 sheets of raspberry-tinted paper that's sadly not edible"
+	},
 	{
 		"date":"2021-06-01",
 		"title":"Lime",
@@ -142,18 +136,18 @@ stationery = [
 		"alt":"A smaller blue journal that was my test for a newer type of stronger binding"
 	},
 	{
+		"date":"2023-10-23",
+		"title":"Old-Prop-Modern-Binding",
+
+		"src":"images/modern binding 1.jpg",
+		"alt":"A small prop style book made entirely of recycled materials, this time bound more traditionally to end up with a more regular book shape. Added some general wine and water damage."
+	},
+	{
 		"date":"2019-09-08",
 		"title":"Blue-Journal",
 
 		"src":"images/blue 20 page journal.jpg",
 		"alt":"A commissioned journal made from the bulk of blue pages and darker blue cover"
-	},
-	{
-		"date":"2019-09-04",
-		"title":"Blue-Paper",
-
-		"src":"images/blue paper 1.jpg",
-		"alt":"A light blue batch of paper for a custom journal"
 	},
 	{
 		"date":"2019-09-06",
@@ -198,31 +192,17 @@ stationery = [
 		"alt":"Speckled thicker blue-ish grey cardstock!"
 	},
 	{
+		"date":"2022-11-09",
+		"title":"Pointedly-Purple",
+
+		"src":"images/purple small 1.jpg",
+		"alt":"A purple colored paper, exploring more unusual colors"
+	},
+	{
 		"date":"2019-08-26",
 		"title":"Envelope-One",
 
 		"src":"images/envelope one.jpg",
 		"alt":"An envelope made from a thicker, larger sheet of paper."
-	},
-	{
-		"date":"2019-08-18",
-		"title":"40-Pages",
-
-		"src":"images/40 standard sheets.jpg",
-		"alt":"A larger batch of very light 4x6 sheets of paper for a larger custom journal!"
-	},
-	{
-		"date":"2019-07-02",
-		"title":"Raspberry-Sheets",
-
-		"src":"images/raspberry sheets.jpg",
-		"alt":"A handmade batch of 4x6 sheets of raspberry-tinted paper that's sadly not edible"
-	},
-	{
-		"date":"2019-09-09",
-		"title":"Package",
-
-		"src":"images/package.jpg",
-		"alt":"One of the journals I made, all packaged up and ready to be shipped out in the mail!"
 	},
 ]

@@ -291,10 +291,47 @@ hr {
 </style>
 
 
-<img src="/assets/icons/icon-inkscraps.png" draggable="false" style="z-index: -1; position: absolute; top: 100px; left: 20px; opacity: 0.1;" />
+<img src="/assets/icons/icon-inkscraps.png" draggable="false" style="z-index: -1; position: absolute; top: 130px; left: 10px; opacity: 0.1; transform: rotate(-100deg);" />
+
+<!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
+<h2 class="loam-section-title"><strong>Paper & Friends</strong></h2>
+<div class="row text-center"> 
+	<div class="col-sm-2"></div>
+	<div class="col-lg">
+		<p>Recyled fibers of all sorts, primarily paper!</p>
+	</div>
+	<div class="col-sm-2"></div>
+</div>
+
+<!-- Gallery -->
+<div>
+	<div class="flexgrid-row"> 
+		<div class="flexgrid-column">
+			<span id="s-displayed-0"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="s-displayed-1"></span>
+		</div>  
+		<div class="flexgrid-column">
+			<span id="s-displayed-2"></span>
+		</div>
+		<div class="flexgrid-column">
+			<span id="s-displayed-3"></span>
+		</div>
+	</div>
+</div>
+<br/>
 
 <!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
 <h2 class="loam-section-title"><strong>Watercolors</strong></h2>
+
+<div class="row text-center"> 
+	<div class="col-sm-2"></div>
+	<div class="col-lg">
+		<p>One of many applications of the recycled paper products above! Interestingly, thicker paper allows more color and texture in a given spot even after drying, giving a more gouache style effect and adding a 3D element. Natural blemishes from the re-used materials add a separate quality to the work as well.</p>
+	</div>
+	<div class="col-sm-2"></div>
+</div>
 
 <!-- Gallery -->
 <div>
@@ -314,28 +351,6 @@ hr {
 	</div>
 </div>
 <br/>
-<br/>
-
-<!--h2 class="loam-section-title"><strong>Handmade Stationery</strong></h2-->
-<h2 class="loam-section-title"><strong>Stationery</strong></h2>
-
-<!-- Gallery -->
-<div>
-	<div class="flexgrid-row"> 
-		<div class="flexgrid-column">
-			<span id="s-displayed-0"></span>
-		</div>
-		<div class="flexgrid-column">
-			<span id="s-displayed-1"></span>
-		</div>  
-		<div class="flexgrid-column">
-			<span id="s-displayed-2"></span>
-		</div>
-		<div class="flexgrid-column">
-			<span id="s-displayed-3"></span>
-		</div>
-	</div>
-</div>
 <br/>
 
 <!-- Modal contents for selecting a displayable image -->
@@ -363,11 +378,11 @@ hr {
 	}
 
 	// Sift through and display all the images in the json file
-	for(let i = 0; i < stationery.length; i++) {
-		let src = stationery[i].src;
-		let alt = stationery[i].alt;
-		let date = stationery[i].date;
-		let title = stationery[i].title;
+	for(let i = 0; i < materials.length; i++) {
+		let src = materials[i].src;
+		let alt = materials[i].alt;
+		let date = materials[i].date;
+		let title = materials[i].title;
 		let elem = document.getElementById('s-displayed-' + (i % columns));
 
 		elem.innerHTML = elem.innerHTML + `<div class="ink-panel"><img data-date="${date}" data-title="${title}" class="ink-displayable" src="${src}" alt="${alt}"></div>`;
