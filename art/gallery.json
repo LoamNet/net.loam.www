@@ -83,7 +83,13 @@ art = [
 		"src":"images/spring buds.jpg",
 		"alt":"It's always lovely to see ground cover come back as the previously tired sticks spring back to life"
 	},
+	{
+		"date":"2024-03-25",
+		"title":"Alder Grove",
 
+		"src":"images/alder grove.jpg",
+		"alt":"I found a fantastic alder grove in a nearby national park, and tried to capture it."
+	},
 ],
 materials = [
 	{
